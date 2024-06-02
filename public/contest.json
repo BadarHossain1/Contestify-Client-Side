@@ -1,0 +1,45 @@
+[
+    {
+      "contestName": "Creative Challenge: Artistic Expression",
+      "image": "unique-image-url-1.jpg",
+      "participantsCount": 215,
+      "detailsButton": "details-url-1",
+      "shortDescription": "Showcase your artistic talent in this thrilling creative challenge. Join now and let your imagination run wild!"
+    },
+    {
+      "contestName": "Photography Contest: Capturing Moments",
+      "image": "unique-image-url-2.jpg",
+      "participantsCount": 178,
+      "detailsButton": "details-url-2",
+      "shortDescription": "Capture breathtaking moments and share your vision with the world. Enter the photography contest today!"
+    },
+    {
+      "contestName": "Writing Competition: Stories Untold",
+      "image": "unique-image-url-3.jpg",
+      "participantsCount": 302,
+      "detailsButton": "details-url-3",
+      "shortDescription": "Unleash your creativity and weave captivating stories in this writing competition. Don't miss out on the chance to be heard!"
+    },
+    {
+      "contestName": "Design Challenge: Innovative Solutions",
+      "image": "unique-image-url-4.jpg",
+      "participantsCount": 135,
+      "detailsButton": "details-url-4",
+      "shortDescription": "Push the boundaries of design and create innovative solutions in this exciting challenge. Dare to be different!"
+    },
+    {
+      "contestName": "Music Showcase: Melodies in Motion",
+      "image": "unique-image-url-5.jpg",
+      "participantsCount": 96,
+      "detailsButton": "details-url-5",
+      "shortDescription": "Let your music resonate with the world in this captivating showcase. Share your melodies and inspire others!"
+    },
+    {
+      "contestName": "Digital Art Exhibition: Virtual Reality",
+      "image": "unique-image-url-6.jpg",
+      "participantsCount": 188,
+      "detailsButton": "details-url-6",
+      "shortDescription": "Experience the realm of virtual reality through stunning digital artworks. Dive into this immersive exhibition now!"
+    }
+  ]
+  

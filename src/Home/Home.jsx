@@ -1,4 +1,5 @@
 import Banner from "./Banner/Banner";
+import PopularContest from "./PopularContext/PopularContest";
 
 
 
@@ -8,6 +9,9 @@ const Home = () => {
         <div>
             
             <Banner></Banner>
+            <div>
+                <PopularContest></PopularContest>
+            </div>
 
             
         </div>

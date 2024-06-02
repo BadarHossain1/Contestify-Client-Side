@@ -10,7 +10,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="max-w-[1170px] mx-auto mt-2 font-EBGaramond ">
+        <div className="max-w-[1170px] mx-auto mt-4 mb-4 font-EBGaramond ">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -22,11 +22,11 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center  items-center">
-                        <CiTrophy className="text-3xl text-indigo-500 mr-1" />
-                        <Link to='/' className=" font-extrabold  font-EBGaramond text-xl lg:text-3xl">Contestify</Link>
+                        <CiTrophy className="text-xl lg:text-4xl text-indigo-500 mr-1" />
+                        <Link to='/' className=" font-extrabold  font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className=" navbar-center   hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {Navlink}
                     </ul>
