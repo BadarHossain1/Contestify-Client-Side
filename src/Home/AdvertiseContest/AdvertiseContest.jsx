@@ -13,6 +13,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 
 const AdvertiseContest = () => {
@@ -24,6 +25,7 @@ const AdvertiseContest = () => {
     }, [])
     return (
         <div className=" max-w-[1170px] mx-auto">
+            <SectionTitle title={"Contest Showcase"} text={"Explore our latest contests, featuring inspiring winners and captivating entries. Dive into the world of creativity and join the excitement as we celebrate the winners and participants who make our contests extraordinary"}></SectionTitle>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
@@ -42,6 +44,7 @@ const AdvertiseContest = () => {
             >
 
                 <div className="grid grid-cols-1 gap-6 ">
+
 
                     {data.map((advertise, index) => <SwiperSlide key={index}><Advertise key={index} advertise={advertise}></Advertise></SwiperSlide>)}
                 </div>

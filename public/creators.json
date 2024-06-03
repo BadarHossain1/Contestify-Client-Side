@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Sophia Smith",
+      "image": "https://i.ibb.co/tYV0xht/person-3.jpg",
+      "contestName": "Abstract Art Challenge: Expressive Abstractions",
+      "contestDescription": "Dive into the realm of abstract art and unleash your creativity. Explore the depths of expression and create artworks that speak volumes without uttering a word.",
+      "participantsCount": 120
+    },
+    {
+      "name": "Emily Brown",
+      "image": "https://i.ibb.co/z5s0YMW/person-2.jpg",
+      "contestName": "Digital Art Challenge: Surreal Creations",
+      "contestDescription": "Embark on a journey into the surreal world of digital artistry. Let your imagination roam free and create mesmerizing artworks that defy reality.",
+      "participantsCount": 150
+    },
+    {
+      "name": "Michael Johnson",
+      "image": "https://i.ibb.co/7pp5Zcp/person1.jpg",
+      "contestName": "Photography Contest: Natural Wonders",
+      "contestDescription": "Capture the breathtaking beauty of nature's wonders in this photography contest. From majestic landscapes to delicate flora, showcase the awe-inspiring splendor of the world around us.",
+      "participantsCount": 200
+    }
+  ]
+  

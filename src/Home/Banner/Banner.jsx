@@ -4,12 +4,13 @@ const Banner = () => {
     return (
         <div className="max-w-[1170px] mx-auto rounded-xl h-[400px]">
             <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
-                <div className="hero-overlay bg-opacity-70 rounded-xl "></div>
+                <div className="hero-overlay bg-opacity-80 rounded-xl "></div>
                 <div className="hero-content text-center text-neutral-content rounded-xl">
                     <div className="">
-                        <h1 className="mb-5 font-EBGaramond font-extrabold text-5xl lg:text-7xl  max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
+                        <h1 className="mb-5 font-EBGaramond font-[900]  bg-gradient-to-r from-indigo-400 to-blue-400 p-8 rounded-2xl text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
+                       
                         <p className="mb-5 text-md max-w-2xl mx-auto">Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. </p>
-                        
+
 
                         <div className="relative max-w-xl mx-auto pt-4">
                             <label htmlFor="Search" className="sr-only"> Search </label>
@@ -22,7 +23,7 @@ const Banner = () => {
                             />
 
                             <span className="absolute inset-y-0 end-0 grid w-10 place-content-center btn-primary">
-                                <button type="button" className= " text-blue-600 font-extrabold hover:text-gray-700 mt-4">
+                                <button type="button" className=" text-blue-600 font-extrabold hover:text-gray-700 mt-4">
                                     <span className="sr-only">Search</span>
 
                                     <svg
