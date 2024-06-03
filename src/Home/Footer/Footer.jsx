@@ -1,4 +1,5 @@
 import { CiTrophy } from "react-icons/ci";
+import { GiLaurelsTrophy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 const Footer = () => {
 
@@ -12,7 +13,7 @@ const Footer = () => {
                         <div className="flex flex-col items-center text-center">
                             <a href="#">
                                 <div className="flex justify-center  items-center">
-                                    <CiTrophy className="text-3xl  text-indigo-500 mr-1" />
+                                    <GiLaurelsTrophy className="text-xl lg:text-4xl text-indigo-500 mr-1" />
                                     <Link to='/' className=" font-extrabold   font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
                                 </div>
                             </a>
