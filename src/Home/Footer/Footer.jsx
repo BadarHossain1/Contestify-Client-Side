@@ -13,7 +13,7 @@ const Footer = () => {
                             <a href="#">
                                 <div className="flex justify-center  items-center">
                                     <CiTrophy className="text-3xl  text-indigo-500 mr-1" />
-                                    <Link to='/' className=" font-extrabold   font-EBGaramond text-xl lg:text-3xl">Contestify</Link>
+                                    <Link to='/' className=" font-extrabold   font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
                                 </div>
                             </a>
 
@@ -21,9 +21,8 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
-                        itaque neque.
+                    <p className="mx-auto mt-6 max-w-2xl text-center leading-relaxed text-gray-500">
+                        Welcome to Contestify, your premier platform for creating, discovering, and participating in a wide range of contests. Whether you're an aspiring creator or a seasoned competitor, Contestify offers you the tools to showcase your talents, engage with a dynamic community, and achieve recognition. Join us today and be part of a vibrant space where creativity knows no bounds. Create, compete, and celebrate your achievements with Contestify. Your journey to excellence starts here!
                     </p>
 
                     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
