@@ -10,6 +10,7 @@ import Routes from './Routes/Routes';
 import Home from './Home/Home';
 import ErrorPage from './Home/ErrorPage/ErrorPage';
 import AllContest from './AllContest/AllContest';
+import ViewDetails from './Home/ViewDetails/ViewDetails';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/AllContest',
         element: <AllContest></AllContest>
+      }
+      ,{
+        path: '/viewDetails/:id',
+        element: <ViewDetails></ViewDetails>
       }
     ]
   },

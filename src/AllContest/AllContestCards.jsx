@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const AllContestCards = ({ contest }) => {
-    const { contestName, image, participantsCount, shortDescription, tags, userName, userImage } = contest;
+    const { contestName, image, participantsCount, shortDescription, tags, userName, userImage, id } = contest;
     const description = shortDescription.slice(0, 100);
     return (
         <div>
@@ -30,7 +30,7 @@ const AllContestCards = ({ contest }) => {
                     <p className="py-2 text-gray-700 dark:text-gray-400">{description}....</p>
 
                     <form className="mt-4">
-                        <Link to='/'
+                        <Link to={`/viewDetails/${id}`}
                             className="group relative inline-block overflow-hidden border border-indigo-600 rounded-xl px-8 py-3 font-EBGaramond text-white  focus:outline-none focus:ring w-full flex justify-center"
                             href="#"
                         >

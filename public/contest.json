@@ -1,102 +1,182 @@
 [
   {
+    "id": 1,
     "contestName": "Creative Image Design Contest",
     "image": "https://source.unsplash.com/featured/?graphic-design",
-    "participantsCount": 220,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/image-design",
     "shortDescription": "Showcase your graphic design skills in our creative image design contest.",
+    "description": "Participate in our Creative Image Design Contest and put your graphic design skills to the test. Create stunning visuals and compete with talented designers.",
+    "prize": "$500",
+    "winner": {
+      "name": "Jane Doe",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-07-01T00:00:00Z",
     "userName": "Jane Doe",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Image Design Contests"
   },
   {
+    "id": 2,
     "contestName": "Compelling Article Writing Contest",
     "image": "https://source.unsplash.com/featured/?writing",
-    "participantsCount": 195,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/article-writing",
     "shortDescription": "Write compelling articles and win exciting prizes in our article writing contest.",
+    "description": "Join our Compelling Article Writing Contest and showcase your writing prowess. Craft engaging articles and compete for a top prize.",
+    "prize": "$300",
+    "winner": {
+      "name": "John Smith",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-06-15T00:00:00Z",
     "userName": "John Smith",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Article Writing"
   },
   {
+    "id": 3,
     "contestName": "Innovative Marketing Strategy Contest",
     "image": "https://source.unsplash.com/featured/?marketing",
-    "participantsCount": 180,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/marketing-strategy",
     "shortDescription": "Create innovative marketing strategies and compete with the best.",
+    "description": "Showcase your marketing genius in our Innovative Marketing Strategy Contest. Develop unique marketing strategies and stand a chance to win.",
+    "prize": "$700",
+    "winner": {
+      "name": "Mary Johnson",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-08-01T00:00:00Z",
     "userName": "Mary Johnson",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Marketing Strategy"
   },
   {
+    "id": 4,
     "contestName": "Digital Advertisement Creation Contest",
     "image": "https://source.unsplash.com/featured/?digital-advertisement",
-    "participantsCount": 210,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/digital-advertisement",
     "shortDescription": "Design captivating digital ads in our digital advertisement contest.",
+    "description": "Participate in our Digital Advertisement Creation Contest and showcase your ad design skills. Create captivating ads and compete to win.",
+    "prize": "$600",
+    "winner": {
+      "name": "Michael Brown",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-07-20T00:00:00Z",
     "userName": "Michael Brown",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Digital Advertisement Contests"
   },
   {
-    "contestName": "Gaming Review Writing Challenge",
-    "image": "https://source.unsplash.com/featured/?gaming",
-    "participantsCount": 170,
-    "detailsButton": "/contest-details/gaming-review",
-    "shortDescription": "Share your gaming insights in our gaming review writing challenge.",
-    "userName": "Emily Davis",
-    "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Gaming Review"
-  },
-  {
+    "id": 5,
     "contestName": "Best Book Review Contest Special",
     "image": "https://source.unsplash.com/featured/?books",
-    "participantsCount": 160,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/book-review",
     "shortDescription": "Write captivating book reviews and win in our book review contest.",
+    "description": "Join our Best Book Review Contest and share your insights on the latest books. Write engaging reviews and compete for a top prize.",
+    "prize": "$200",
+    "winner": {
+      "name": "Chris Wilson",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-06-30T00:00:00Z",
     "userName": "Chris Wilson",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Book Review"
   },
   {
+    "id": 6,
     "contestName": "Innovative Business Idea Contest",
     "image": "https://source.unsplash.com/featured/?business",
-    "participantsCount": 230,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/business-idea",
     "shortDescription": "Pitch your innovative business ideas and stand a chance to win.",
+    "description": "Participate in our Innovative Business Idea Contest and pitch your groundbreaking business concepts. Compete for the opportunity to bring your idea to life.",
+    "prize": "$1000",
+    "winner": {
+      "name": "Sarah Martinez",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-08-15T00:00:00Z",
     "userName": "Sarah Martinez",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Business Idea Contests"
   },
   {
+    "id": 7,
     "contestName": "Captivating Movie Review Contest",
     "image": "https://source.unsplash.com/featured/?movies",
-    "participantsCount": 190,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/movie-review",
     "shortDescription": "Share your thoughts on the latest movies in our movie review contest.",
+    "description": "Join our Captivating Movie Review Contest and share your insights on the latest films. Write captivating reviews and compete to win.",
+    "prize": "$400",
+    "winner": {
+      "name": "David Garcia",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-07-10T00:00:00Z",
     "userName": "David Garcia",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Movie Review"
   },
   {
+    "id": 8,
     "contestName": "Creative Digital Advertisement Contest",
     "image": "https://source.unsplash.com/featured/?advertisement",
-    "participantsCount": 200,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/digital-advertisement-creative",
     "shortDescription": "Design creative digital ads and showcase your talent.",
+    "description": "Participate in our Creative Digital Advertisement Contest and showcase your ad design creativity. Create unique ads and compete for a prize.",
+    "prize": "$500",
+    "winner": {
+      "name": "Anna Lee",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-06-25T00:00:00Z",
     "userName": "Anna Lee",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Digital Advertisement Contests"
   },
   {
+    "id": 9,
     "contestName": "Strategic Marketing Challenge",
     "image": "https://source.unsplash.com/featured/?strategy",
-    "participantsCount": 185,
+    "participantsCount": 0,
     "detailsButton": "/contest-details/marketing-strategy-challenge",
     "shortDescription": "Develop strategic marketing plans and compete to win.",
+    "description": "Join our Strategic Marketing Challenge and develop effective marketing strategies. Compete with others and win a top prize.",
+    "prize": "$700",
+    "winner": {
+      "name": "Robert Clark",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-08-05T00:00:00Z",
     "userName": "Robert Clark",
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Marketing Strategy"
+  },
+  {
+    "id": 10,
+    "contestName": "Gaming Review Writing Challenge",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "participantsCount": 0,
+    "detailsButton": "/contest-details/gaming-review",
+    "shortDescription": "Share your gaming insights in our gaming review writing challenge.",
+    "description": "Participate in our Gaming Review Writing Challenge and share your thoughts on the latest games. Write insightful reviews and compete for a prize.",
+    "prize": "$300",
+    "winner": {
+      "name": "Emily Davis",
+      "image": "https://source.unsplash.com/featured/?person"
+    },
+    "deadline": "2024-07-15T00:00:00Z",
+    "userName": "Emily Davis",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Gaming Review"
   }
 ]
