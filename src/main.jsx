@@ -11,6 +11,7 @@ import Home from './Home/Home';
 import ErrorPage from './Home/ErrorPage/ErrorPage';
 import AllContest from './AllContest/AllContest';
 import ViewDetails from './Home/ViewDetails/ViewDetails';
+import Login from './Auth/Login';
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       ,{
         path: '/viewDetails/:id',
         element: <ViewDetails></ViewDetails>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   },

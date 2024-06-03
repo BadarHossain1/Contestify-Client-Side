@@ -32,7 +32,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-gradient-to-r from-indigo-500 to-blue-400 w-24 rounded-xl font-EBGaramond text-white">Login</a>
+                    <Link to='/login' className="btn bg-gradient-to-r from-indigo-500 to-blue-400 w-24 rounded-xl font-EBGaramond text-white">Login</Link>
                 </div>
             </div>
         </div>
