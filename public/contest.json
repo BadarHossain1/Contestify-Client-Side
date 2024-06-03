@@ -1,82 +1,102 @@
 [
   {
-    "contestName": "Creative Challenge: Artistic Expression",
-    "image": "https://images.unsplash.com/photo-1504198458649-3128b932f49b",
-    "participantsCount": 215,
-    "detailsButton": "details-url-1",
-    "shortDescription": "Showcase your artistic talent in this thrilling creative challenge. Join now and let your imagination run wild!",
-    "tag": "Image Design Contests"
+    "contestName": "Creative Image Design Contest",
+    "image": "https://source.unsplash.com/featured/?graphic-design",
+    "participantsCount": 220,
+    "detailsButton": "/contest-details/image-design",
+    "shortDescription": "Showcase your graphic design skills in our creative image design contest.",
+    "userName": "Jane Doe",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Image Design Contests"
   },
   {
-    "contestName": "Photography Contest: Capturing Moments",
-    "image": "https://images.unsplash.com/photo-1508780709619-79562169bc64",
-    "participantsCount": 178,
-    "detailsButton": "details-url-2",
-    "shortDescription": "Capture breathtaking moments and share your vision with the world. Enter the photography contest today!",
-    "tag": "Image Design Contests"
+    "contestName": "Compelling Article Writing Contest",
+    "image": "https://source.unsplash.com/featured/?writing",
+    "participantsCount": 195,
+    "detailsButton": "/contest-details/article-writing",
+    "shortDescription": "Write compelling articles and win exciting prizes in our article writing contest.",
+    "userName": "John Smith",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Article Writing"
   },
   {
-    "contestName": "Writing Competition: Stories Untold Here",
-    "image": "https://images.unsplash.com/photo-1530133532238-4c148c7f76d5",
-    "participantsCount": 302,
-    "detailsButton": "details-url-3",
-    "shortDescription": "Unleash your creativity and weave captivating stories in this writing competition. Don't miss out on the chance to be heard!",
-    "tag": "Article Writing"
+    "contestName": "Innovative Marketing Strategy Contest",
+    "image": "https://source.unsplash.com/featured/?marketing",
+    "participantsCount": 180,
+    "detailsButton": "/contest-details/marketing-strategy",
+    "shortDescription": "Create innovative marketing strategies and compete with the best.",
+    "userName": "Mary Johnson",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Marketing Strategy"
   },
   {
-    "contestName": "Design Challenge: Innovative Solutions",
-    "image": "https://images.unsplash.com/photo-1500522144261-ea64433bbe27",
-    "participantsCount": 135,
-    "detailsButton": "details-url-4",
-    "shortDescription": "Push the boundaries of design and create innovative solutions in this exciting challenge. Dare to be different!",
-    "tag": "Digital advertisement Contests"
+    "contestName": "Digital Advertisement Creation Contest",
+    "image": "https://source.unsplash.com/featured/?digital-advertisement",
+    "participantsCount": 210,
+    "detailsButton": "/contest-details/digital-advertisement",
+    "shortDescription": "Design captivating digital ads in our digital advertisement contest.",
+    "userName": "Michael Brown",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Digital Advertisement Contests"
   },
   {
-    "contestName": "Music Showcase: Melodies in Motion",
-    "image": "https://images.unsplash.com/photo-1504508047667-7a5a76f61006",
-    "participantsCount": 96,
-    "detailsButton": "details-url-5",
-    "shortDescription": "Let your music resonate with the world in this captivating showcase. Share your melodies and inspire others!",
-    "tag": "Article Writing"
+    "contestName": "Gaming Review Writing Challenge",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "participantsCount": 170,
+    "detailsButton": "/contest-details/gaming-review",
+    "shortDescription": "Share your gaming insights in our gaming review writing challenge.",
+    "userName": "Emily Davis",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Gaming Review"
   },
   {
-    "contestName": "Digital Art Exhibition: Virtual Reality Here",
-    "image": "https://images.unsplash.com/photo-1581091870628-63c0b92b4c86",
-    "participantsCount": 188,
-    "detailsButton": "details-url-6",
-    "shortDescription": "Experience the realm of virtual reality through stunning digital artworks. Dive into this immersive exhibition now!",
-    "tag": "Image Design Contests"
+    "contestName": "Best Book Review Contest",
+    "image": "https://source.unsplash.com/featured/?books",
+    "participantsCount": 160,
+    "detailsButton": "/contest-details/book-review",
+    "shortDescription": "Write captivating book reviews and win in our book review contest.",
+    "userName": "Chris Wilson",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Book Review"
   },
   {
-    "contestName": "Innovation Hackathon: Tech Solutions",
-    "image": "https://images.unsplash.com/photo-1555371368-f279a9047f46",
-    "participantsCount": 250,
-    "detailsButton": "details-url-7",
-    "shortDescription": "Join the innovation hackathon and develop tech solutions for real-world problems. Collaborate and compete with the best!",
-    "tag": "Business Idea Contests"
+    "contestName": "Innovative Business Idea Contest",
+    "image": "https://source.unsplash.com/featured/?business",
+    "participantsCount": 230,
+    "detailsButton": "/contest-details/business-idea",
+    "shortDescription": "Pitch your innovative business ideas and stand a chance to win.",
+    "userName": "Sarah Martinez",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Business Idea Contests"
   },
   {
-    "contestName": "Fashion Design Contest: Trendsetters",
-    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c199",
-    "participantsCount": 165,
-    "detailsButton": "details-url-8",
-    "shortDescription": "Create stunning fashion designs and showcase your talent in this trendsetting contest. Be the next fashion icon!",
-    "tag": "Image Design Contests"
+    "contestName": "Captivating Movie Review Contest",
+    "image": "https://source.unsplash.com/featured/?movies",
+    "participantsCount": 190,
+    "detailsButton": "/contest-details/movie-review",
+    "shortDescription": "Share your thoughts on the latest movies in our movie review contest.",
+    "userName": "David Garcia",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Movie Review"
   },
   {
-    "contestName": "Cooking Challenge: Gourmet Delights",
-    "image": "https://images.unsplash.com/photo-1556910103-1d5414a44b36",
-    "participantsCount": 140,
-    "detailsButton": "details-url-9",
-    "shortDescription": "Show off your culinary skills in this gourmet cooking challenge. Impress with your creativity and taste!",
-    "tag": "Article Writing"
+    "contestName": "Creative Digital Advertisement Contest",
+    "image": "https://source.unsplash.com/featured/?advertisement",
+    "participantsCount": 200,
+    "detailsButton": "/contest-details/digital-advertisement-creative",
+    "shortDescription": "Design creative digital ads and showcase your talent.",
+    "userName": "Anna Lee",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Digital Advertisement Contests"
   },
   {
-    "contestName": "Gaming Tournament: Battle Royale Here",
-    "image": "https://images.unsplash.com/photo-1600964168934-d8cbf643f5f2",
-    "participantsCount": 320,
-    "detailsButton": "details-url-10",
-    "shortDescription": "Compete in the ultimate gaming tournament and prove your skills in the battle royale arena. Join now and dominate!",
-    "tag": "Gaming Review"
+    "contestName": "Strategic Marketing Challenge",
+    "image": "https://source.unsplash.com/featured/?strategy",
+    "participantsCount": 185,
+    "detailsButton": "/contest-details/marketing-strategy-challenge",
+    "shortDescription": "Develop strategic marketing plans and compete to win.",
+    "userName": "Robert Clark",
+    "userImage": "https://source.unsplash.com/featured/?person",
+    "tags": "Marketing Strategy"
   }
 ]
