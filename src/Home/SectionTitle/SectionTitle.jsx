@@ -7,7 +7,7 @@ const SectionTitle = ({ title, text }) => {
                 {/* <h2 className="text-xl lg:text-5xl font-EBGaramond font-bold text-gray-900 sm:text-3xl">{title}</h2> */}
                 <span className="flex items-center">
                     <span className="h-px flex-1 bg-black"></span>
-                    <span className="shrink-0 px-6 text-xl lg:text-5xl font-EBGaramond font-bold text-gray-900 sm:text-3xl">{title}</span>
+                    <span className="shrink-0 px-6 text-4xl lg:text-5xl font-EBGaramond font-bold text-gray-900 sm:text-3xl">{title}</span>
                     <span className="h-px flex-1 bg-black"></span>
                 </span>
                 <p className="mx-auto mt-4 max-w-1/4 text-gray-500">

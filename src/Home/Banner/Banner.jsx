@@ -3,8 +3,8 @@
 const Banner = () => {
     return (
         <div className="max-w-[1170px] mx-auto rounded-xl h-[400px]">
-            <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/Y8s7twk/hackathon.jpg)' }}>
-                <div className="hero-overlay bg-opacity-80 rounded-xl "></div>
+            <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
+                <div className="hero-overlay bg-opacity-70 rounded-xl "></div>
                 <div className="hero-content text-center text-neutral-content rounded-xl">
                     <div className="">
                         <h1 className="mb-5 font-EBGaramond font-extrabold text-5xl lg:text-7xl  max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
@@ -22,7 +22,7 @@ const Banner = () => {
                             />
 
                             <span className="absolute inset-y-0 end-0 grid w-10 place-content-center btn-primary">
-                                <button type="button" className= " text-blue-600 font-extrabold hover:text-gray-700">
+                                <button type="button" className= " text-blue-600 font-extrabold hover:text-gray-700 mt-4">
                                     <span className="sr-only">Search</span>
 
                                     <svg

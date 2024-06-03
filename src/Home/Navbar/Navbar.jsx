@@ -1,5 +1,5 @@
 
-import { CiTrophy } from "react-icons/ci";
+import { GiLaurelsTrophy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 const Navbar = () => {
 
@@ -22,8 +22,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center  items-center">
-                        <CiTrophy className="text-xl lg:text-4xl text-indigo-500 mr-1" />
-                        <Link to='/' className=" font-extrabold  font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
+                        <GiLaurelsTrophy className="text-xl lg:text-4xl text-indigo-500 mr-1" />
+                        <Link to='/' className=" font-[900']  font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
                     </div>
                 </div>
                 <div className=" navbar-center   hidden lg:flex">
