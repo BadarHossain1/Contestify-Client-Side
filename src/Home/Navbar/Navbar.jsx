@@ -10,8 +10,9 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="max-w-[1170px] mx-auto mt-4 mb-4 font-EBGaramond ">
-            <div className="navbar bg-base-100">
+        <div className="w-full mx-auto
+         font-EBGaramond ">
+            <div className="navbar  bg-white   z-10 fixed shadow-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

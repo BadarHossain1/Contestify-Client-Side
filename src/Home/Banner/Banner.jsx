@@ -2,13 +2,14 @@
 
 const Banner = () => {
     return (
-        <div className="max-w-[1170px] mx-auto rounded-xl">
-            <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
-                <div className="hero-overlay bg-opacity-10 rounded-xl "></div>
-                <div className="hero-content text-center text-neutral-content rounded-xl">
-                    <div className="bg-gradient-to-r from-indigo-500 to-blue-500 py-4 px-4 rounded-3xl">
-                        <h1 className=" font-EBGaramond font-[900] hero-overlay bg-opacity-30  = p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
-                       
+        <div className="w-full mx-auto ">
+            <div className="hero min-h-screen " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
+                <div className="hero-overlay bg-opacity-60  "></div>
+                <div className="hero-content text-center text-neutral-content rounded-xl mt-8">
+                    <div className="bg-gradient-to-r from-indigo-500 to-blue-500  py-4 px-4 rounded-3xl">
+                        
+                        <h1 className=" font-EBGaramond font-[900] hero-overlay bg-opacity-30   p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
+
                         <p className="mb-5 text-md max-w-4xl mx-auto   rounded-b-3xl pb-3 px-3 font-bold">Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. </p>
 
 
@@ -43,6 +44,7 @@ const Banner = () => {
                                 </button>
                             </span>
                         </div>
+                    <div className="hero-overlay bg-opacity-80 rounded-xl "></div>
                     </div>
                 </div>
             </div>
