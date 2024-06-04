@@ -1,34 +1,31 @@
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
-
-const Login = () => {
-
+import img from '../assets/welcome.jpg';
+const Register = () => {
     const {
         register,
         handleSubmit,
-       
+      
         formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
         console.log(data)
-
+    
 
     }
-
-
     return (
         <div>
 
 
 
             <section className="bg-white shadow-xl">
-                <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-                    <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+                <div className="lg:grid lg:min-h-screen lg:grid-cols-12     ">
+                    <aside className="relative flex h-32 items-end lg:col-span-5 lg:h-full xl:col-span-6">
                         <img
-                            alt=""
-                            src="https://i.ibb.co/QcPdnWB/register.jpg"
+                            alt="."
+                            src={img}
                             className="absolute inset-0 h-full w-full object-cover hidden md:flex lg:flex"
                         />
                     </aside>
@@ -41,7 +38,7 @@ const Login = () => {
                             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                                 <div className="flex justify-start  items-center">
                                     <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-500 mr-1" />
-                                    <Link className=" font-[900]  font-EBGaramond text-3xl lg:text-4xl">Login</Link>
+                                    <Link className=" font-[900]  font-EBGaramond text-3xl lg:text-4xl">Register</Link>
                                 </div>
 
                             </h1>
@@ -51,6 +48,50 @@ const Login = () => {
                             </p>
 
                             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-6 gap-6">
+
+                            <div className="col-span-6">
+                                    <label
+                                        htmlFor="Name"
+                                        className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
+                                    >
+                                        <input
+                                            type="Name"
+                                            id="Name"
+                                            placeholder="Full Name"
+                                            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" {...register("Name", { required: "Name is required" })}
+                                        />
+
+
+
+                                        <span
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                        >
+                                            Full Name
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div className="col-span-6">
+                                    <label
+                                        htmlFor="UserEmail"
+                                        className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
+                                    >
+                                        <input
+                                            type="photo"
+                                            id="Email"
+                                            placeholder="photo"
+                                            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" 
+                                        />
+
+
+
+                                        <span
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                        >
+                                            Photo
+                                        </span>
+                                    </label>
+                                </div>
 
 
 
@@ -160,7 +201,7 @@ const Login = () => {
 
                                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                         Do not have an account?
-                                        <Link to='/register'  className="text-blue-500 underline ">  Register</Link>.
+                                        <a href="#" className="text-blue-500 underline ">  Register</a>.
                                     </p>
                                 </div>
                             </form>
@@ -172,4 +213,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

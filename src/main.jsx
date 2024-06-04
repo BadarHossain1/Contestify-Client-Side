@@ -12,6 +12,7 @@ import ErrorPage from './Home/ErrorPage/ErrorPage';
 import AllContest from './AllContest/AllContest';
 import ViewDetails from './Home/ViewDetails/ViewDetails';
 import Login from './Auth/Login';
+import Register from './Auth/Register';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,9 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },{
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
