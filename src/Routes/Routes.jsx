@@ -6,8 +6,12 @@ import Footer from "../Home/Footer/Footer";
 const Routes = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div>
+                <Navbar></Navbar>
+            </div>
+            <div>
+                <Outlet></Outlet>
+            </div>
             <div className="mt-[200px]">
                 <Footer></Footer>
             </div>

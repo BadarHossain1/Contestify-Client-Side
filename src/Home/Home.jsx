@@ -9,20 +9,22 @@ import PopularContest from "./PopularContext/PopularContest";
 const Home = () => {
     return (
         <div>
-            
-            <Banner></Banner>
-            <div className="pt-[400px] lg:pt-[200px]">
+
+            <div>
+                <Banner></Banner>
+            </div>
+            <div className="">
                 <PopularContest></PopularContest>
             </div>
-            <div className="pt-[400px] lg:pt-[100px]">
+            <div className="">
                 <AdvertiseContest ></AdvertiseContest>
             </div>
-            <div className="pt-[400px] lg:pt-[100px]">
+            <div className="">
                 <ContestCreators></ContestCreators>
             </div>
-            
 
-            
+
+
         </div>
     );
 };

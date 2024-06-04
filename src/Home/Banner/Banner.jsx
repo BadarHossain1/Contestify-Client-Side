@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="max-w-[1170px] mx-auto rounded-xl h-[400px]">
+        <div className="max-w-[1170px] mx-auto rounded-xl">
             <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
                 <div className="hero-overlay bg-opacity-10 rounded-xl "></div>
                 <div className="hero-content text-center text-neutral-content rounded-xl">
