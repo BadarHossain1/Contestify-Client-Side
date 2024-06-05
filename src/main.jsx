@@ -13,6 +13,7 @@ import AllContest from './AllContest/AllContest';
 import ViewDetails from './Home/ViewDetails/ViewDetails';
 import Login from './Auth/Login';
 import Register from './Auth/Register';
+import ContextProvider from './ContextProvider/ContextProvider';
 
 
 const router = createBrowserRouter([
@@ -25,20 +26,20 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
 
-        
+
       },
       {
         path: '/AllContest',
         element: <AllContest></AllContest>
       }
-      ,{
+      , {
         path: '/viewDetails/:id',
         element: <ViewDetails></ViewDetails>
       },
       {
         path: '/login',
         element: <Login></Login>
-      },{
+      }, {
         path: '/register',
         element: <Register></Register>
       }
@@ -46,7 +47,9 @@ const router = createBrowserRouter([
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <ContextProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>,
+  </ContextProvider>
 )

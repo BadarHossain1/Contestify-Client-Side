@@ -1,20 +1,128 @@
-import { GiLaurelsTrophy } from "react-icons/gi";
-import { Link } from "react-router-dom";
+
 import { useForm } from "react-hook-form"
 import img from '../assets/welcome.jpg';
+import { AuthContext } from "../ContextProvider/ContextProvider";
+import { useContext, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Bounce } from 'react-toastify';
+import { Link, useNavigate } from "react-router-dom";
+import { GiLaurelsTrophy } from "react-icons/gi";
+import { FaGoogle } from "react-icons/fa";
+
+
+
 const Register = () => {
+
+    useEffect(() => {
+        document.title = "Register"
+    }, [])
+    const { registerUser, GoogleSignIn, updateUserProfile, setInfo } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const from = "/";
+
     const {
         register,
         handleSubmit,
-      
+
         formState: { errors },
     } = useForm()
 
+
+    const notify = (success) => {
+        if (success) {
+            toast.success('User Created Successfully', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
+    }
+
     const onSubmit = (data) => {
+
         console.log(data)
-    
+
+        const { Name, Photo, password } = data;
+
+
+        registerUser(data.email, password)
+            .then(result => {
+                console.log(result.user);
+                notify(true);
+
+                setInfo({ displayName: Name, photoURL: Photo });
+                updateUserProfile(Name, Photo)
+                    .then(result => {
+                        console.log(result.user);
+                        //navigate here to home
+                        notify(true);
+                        navigate(from);
+
+
+
+                    })
+                    .catch(error => {
+                        console.log(error);
+
+                    });
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error('Error creating User', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+            });
+    }
+
+
+
+    const handleGoogle = (e) => {
+        e.preventDefault();
+
+        GoogleSignIn().
+            then(result => {
+                const user = result.user;
+
+                console.log("user signed with google", user);
+                const { displayName, photoURL, email } = user;
+                console.log(displayName, email, photoURL);
+                updateUserProfile(displayName, photoURL)
+
+
+
+                notify(true);
+                navigate(from);
+            })
+            .catch(error => {
+                console.log(error);
+
+
+            })
+
+
 
     }
+
+
+
+
+
     return (
         <div>
 
@@ -49,7 +157,7 @@ const Register = () => {
 
                             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-6 gap-6">
 
-                            <div className="col-span-6">
+                                <div className="col-span-6">
                                     <label
                                         htmlFor="Name"
                                         className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
@@ -78,9 +186,9 @@ const Register = () => {
                                     >
                                         <input
                                             type="photo"
-                                            id="Email"
+                                            id="photo"
                                             placeholder="photo"
-                                            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm" 
+                                            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"  {...register("Photo")}
                                         />
 
 
@@ -129,7 +237,7 @@ const Register = () => {
                                         <input
                                             type="password"
                                             id="password"
-                                            placeholder="Password"
+                                            placeholder="password"
                                             className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"  {...register("passwordGive", { pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/ })}
                                         />
 
@@ -137,12 +245,12 @@ const Register = () => {
                                         <span
                                             className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
-                                            Password
+                                            password
                                         </span>
 
                                     </label>
 
-                                    {errors.passwordGive && <span className="text-sm text-red-600">Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.</span>}
+                                    {errors.passwordGive && <span className="text-sm text-red-600">password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.</span>}
                                 </div>
 
 
@@ -154,7 +262,7 @@ const Register = () => {
                                         <input
                                             type="password"
                                             id="password"
-                                            placeholder="Password"
+                                            placeholder="password"
                                             className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"  {...register("password", { pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/ })}
                                         />
 
@@ -165,7 +273,16 @@ const Register = () => {
                                             Password Confirmation
                                         </span>
                                     </label>
-                                    {errors.password && <span className="text-sm text-red-600">Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.</span>}
+                                    {errors.password && <span className="text-sm text-red-600">password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.</span>}
+                                </div>
+
+                                
+                                <div className="flex justify-center gap-6 mt-2 mb-2">
+                                    <button onClick={handleGoogle} className="btn btn-circle">
+                                        <FaGoogle /> 
+                                    </button>
+                                    
+                                    
                                 </div>
 
                                 <div className="col-span-6">
@@ -198,10 +315,11 @@ const Register = () => {
                                     >
                                         Create an account
                                     </button>
+                                    <ToastContainer />
 
                                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                         Do not have an account?
-                                        <a href="#" className="text-blue-500 underline ">  Register</a>.
+                                        <Link to='/login' className="text-blue-500 underline ">  Login</Link>.
                                     </p>
                                 </div>
                             </form>
