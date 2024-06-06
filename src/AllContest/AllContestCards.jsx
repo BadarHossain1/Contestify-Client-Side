@@ -5,10 +5,12 @@ const AllContestCards = ({ contest }) => {
     const { contestName, image, participantsCount, shortDescription, tags, userName, userImage, id } = contest;
     const description = shortDescription.slice(0, 100);
     return (
-        <div>
+
+        <div className="rounded-xl">
+
             <a href="#" className="group relative block overflow-hidden">
                 <button
-                    className="absolute end-4 top-4 z-10 px-3 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+                    className="absolute end-4 top-4 z-10 px-3 rounded-full  p-1.5  transition hover:text-gray-900/75"
                 >
                     {participantsCount}
 
@@ -18,16 +20,16 @@ const AllContestCards = ({ contest }) => {
                 <img
                     src={image}
                     alt=""
-                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+                    className="h-64 w-full object-cover rounded-xl transition duration-500 group-hover:scale-105 sm:h-72"
                 />
 
-                <div className="relative border border-gray-100 bg-white p-6">
+                <div className="relative  p-6 ">
                     <span className="whitespace-nowrap bg-gradient-to-r from-indigo-500 to-blue-400 px-3 py-1.5 text-xs font-medium text-white"> {tags} </span>
 
-                    <h3 className="mt-4 text-lg font-medium text-gray-900">{contestName}</h3>
+                    <h3 className="mt-4 text-lg font-medium ">{contestName}</h3>
 
-                    <p className="mt-1.5 text-sm text-gray-700">Participants: {participantsCount}</p>
-                    <p className="py-2 text-gray-700 dark:text-gray-400">{description}....</p>
+                    <p className="mt-1.5 text-sm ">Participants: {participantsCount}</p>
+                    <p className="py-2 ">{description}....</p>
 
                     <form className="mt-4">
                         <Link to={`/viewDetails/${id}`}
@@ -47,7 +49,12 @@ const AllContestCards = ({ contest }) => {
                     </form>
                 </div>
             </a>
-        </div>
+
+
+        </div >
+
+
+
     );
 };
 

@@ -51,6 +51,7 @@ const ErrorPage = () => {
                     Go Back Home
                 </Link>
             </div>
+            
         </div>
     );
 };

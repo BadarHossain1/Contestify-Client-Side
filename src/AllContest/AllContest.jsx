@@ -13,12 +13,13 @@ const AllContest = () => {
         .then(data => setData(data)) 
     },[])
     return (
-        <div>
-            <div className="hero min-h-[300px] mx-auto rounded-xl max-w-[1170px] border-indigo-500" style={{ backgroundImage: 'url(https://i.ibb.co/HhXYtgB/All-Contest.jpg)' }}>
-                <div className="hero-overlay rounded-xl bg-opacity-60"></div>
+        <div className="">
+            <div className=""></div>
+            <div className="hero min-h-[350px]  mx-auto   w-full border-indigo-500" style={{ backgroundImage: 'url(https://i.ibb.co/HhXYtgB/All-Contest.jpg)' }}>
+                <div className="hero-overlay  bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md ">
-                        <h1 className="mb-5 text-5xl pt-2  font-[900] font-EBGaramond">All <span className="">Contest</span></h1>
+                        <h1 className="mb-5 text-5xl pt-10  font-[900] font-EBGaramond">All <span className="">Contest</span></h1>
 
                     </div>
                 </div>

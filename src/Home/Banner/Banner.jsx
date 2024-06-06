@@ -8,9 +8,9 @@ const Banner = () => {
                 <div className="hero-content text-center text-neutral-content rounded-xl mt-8">
                     <div className="bg-gradient-to-r from-indigo-500 to-blue-500  py-4 px-4 rounded-3xl">
                         
-                        <h1 className=" font-EBGaramond font-[900] hero-overlay bg-opacity-30   p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
+                        <h1 className=" text-white font-EBGaramond font-[900] hero-overlay bg-opacity-30   p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
 
-                        <p className="mb-5 text-md max-w-4xl mx-auto   rounded-b-3xl pb-3 px-3 font-bold">Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. </p>
+                        <p className="mb-5 text-md max-w-4xl mx-auto text-white  rounded-b-3xl pb-3 px-3 font-bold">Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. </p>
 
 
                         <div className="relative max-w-xl mx-auto pt-4 pb-4">
