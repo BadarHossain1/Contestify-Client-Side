@@ -14,6 +14,7 @@ import ViewDetails from './Home/ViewDetails/ViewDetails';
 import Login from './Auth/Login';
 import Register from './Auth/Register';
 import ContextProvider from './ContextProvider/ContextProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       }
       , {
         path: '/viewDetails/:id',
-        element: <ViewDetails></ViewDetails>
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
       },
       {
         path: '/login',

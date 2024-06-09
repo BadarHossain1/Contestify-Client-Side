@@ -1,25 +1,102 @@
 import { GiLaurelsTrophy } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../ContextProvider/ContextProvider";
+import { Bounce, toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
+
+    useEffect(() => {
+        document.title = "Register"
+    }, [])
+    const { GoogleSignIn, Login, setLoading } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
 
     const {
         register,
         handleSubmit,
-       
+
         formState: { errors },
     } = useForm()
 
+
+    const notify = (success) => {
+        if (success) {
+            toast.success('User Created Successfully', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
+    }
+
     const onSubmit = (data) => {
+
         console.log(data)
 
+        const {  password } = data;
 
+
+        Login(data.email, password)
+            .then(result => {
+                console.log(result.user);
+                notify(true);
+                navigate(location?.state || '/')
+
+
+
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error('Error creating User', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce, 
+                });
+            });
+    }
+
+
+
+    
+    const handleGoogle = e => {
+        e.preventDefault();
+
+        GoogleSignIn()
+            .then(result => {
+                console.log('User Google logged In', result.user);
+                setLoading(false);
+                notify(true)
+                navigate(location?.state || '/')
+
+
+
+            })
+            .catch(error => {
+                console.log('google login error', error);
+                notify(false)
+            })
     }
 
 
     return (
-        <div>
+        <div className="pt-[50px]">
 
 
 
@@ -151,6 +228,14 @@ const Login = () => {
                                     </p>
                                 </div>
 
+                                <div className="flex justify-center gap-6 mt-2 mb-2">
+                                    <button onClick={handleGoogle} className="btn btn-circle">
+                                        <FaGoogle />
+                                    </button>
+
+
+                                </div>
+
                                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                                     <button type="submit"
                                         className="inline-block shrink-0 rounded-md border border-blue-600 bg-gradient-to-r from-indigo-500 to-blue-400 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
@@ -160,7 +245,7 @@ const Login = () => {
 
                                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                         Do not have an account?
-                                        <Link to='/register'  className="text-blue-500 underline ">  Register</Link>.
+                                        <Link to='/register' className="text-blue-500 underline ">  Register</Link>.
                                     </p>
                                 </div>
                             </form>

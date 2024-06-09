@@ -1,67 +1,66 @@
 [
-    {
+  {
       "contestName": "Marketing Strategy Contest",
       "contestDescription": "Join our marketing strategy contest today and stand out from the crowd!",
       "participateLink": "https://example.com/participate-marketing-strategy",
       "winner": {
-        "name": "Sophia Brown",
-        "image": "https://randomuser.me/api/portraits/women/3.jpg",
-        "entry": "A brilliant marketing campaign that drove impressive results."
+          "name": "Sophia Brown",
+          "image": "https://randomuser.me/api/portraits/women/3.jpg",
+          "entry": "A brilliant marketing campaign that drove impressive results."
       },
       "stats": {
-        "totalParticipants": 100,
-        "totalContestsWon": 12,
-        "currentParticipation": 20
+          "totalParticipants": 100,
+          "totalContestsWon": 12,
+          "currentParticipation": 20
       },
-      "image": "https://source.unsplash.com/featured/?marketing"
-    },
-    {
+      "image": "https://source.unsplash.com/featured/?marketing,office"
+  },
+  {
       "contestName": "Digital Advertisement Contest",
       "contestDescription": "Showcase your creativity in our digital advertisement contest and win big prizes!",
       "participateLink": "https://example.com/participate-digital-advertisement",
       "winner": {
-        "name": "William Johnson",
-        "image": "https://randomuser.me/api/portraits/men/4.jpg",
-        "entry": "An innovative digital ad that captivated audiences worldwide."
+          "name": "William Johnson",
+          "image": "https://randomuser.me/api/portraits/men/4.jpg",
+          "entry": "An innovative digital ad that captivated audiences worldwide."
       },
       "stats": {
-        "totalParticipants": 80,
-        "totalContestsWon": 8,
-        "currentParticipation": 15
+          "totalParticipants": 80,
+          "totalContestsWon": 8,
+          "currentParticipation": 15
       },
-      "image": "https://source.unsplash.com/featured/?digital"
-    },
-    {
+      "image": "https://source.unsplash.com/featured/?digital,advertisement"
+  },
+  {
       "contestName": "Gaming Review Challenge",
       "contestDescription": "Share your gaming insights in our review challenge and become a gaming influencer!",
       "participateLink": "https://example.com/participate-gaming-review",
       "winner": {
-        "name": "Olivia Wilson",
-        "image": "https://randomuser.me/api/portraits/women/5.jpg",
-        "entry": "A comprehensive review that highlighted the strengths and weaknesses of the game."
+          "name": "Olivia Wilson",
+          "image": "https://randomuser.me/api/portraits/women/5.jpg",
+          "entry": "A comprehensive review that highlighted the strengths and weaknesses of the game."
       },
       "stats": {
-        "totalParticipants": 90,
-        "totalContestsWon": 10,
-        "currentParticipation": 18
+          "totalParticipants": 90,
+          "totalContestsWon": 10,
+          "currentParticipation": 18
       },
-      "image": "https://source.unsplash.com/featured/?gaming"
-    },
-    {
+      "image": "https://source.unsplash.com/featured/?gaming,video-game"
+  },
+  {
       "contestName": "Book Review Competition",
       "contestDescription": "Join our book review competition and share your thoughts on the latest bestsellers!",
       "participateLink": "https://example.com/participate-book-review",
       "winner": {
-        "name": "Noah Taylor",
-        "image": "https://randomuser.me/api/portraits/men/6.jpg",
-        "entry": "An insightful review that delved deep into the themes and characters of the book."
+          "name": "Noah Taylor",
+          "image": "https://randomuser.me/api/portraits/men/6.jpg",
+          "entry": "An insightful review that delved deep into the themes and characters of the book."
       },
       "stats": {
-        "totalParticipants": 110,
-        "totalContestsWon": 15,
-        "currentParticipation": 22
+          "totalParticipants": 110,
+          "totalContestsWon": 15,
+          "currentParticipation": 22
       },
-      "image": "https://source.unsplash.com/featured/?book"
-    }
-  ]
-  
+      "image": "https://source.unsplash.com/featured/?book,reading"
+  }
+]

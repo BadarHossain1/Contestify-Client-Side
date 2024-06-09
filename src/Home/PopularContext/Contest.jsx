@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Contest = ({ contest }) => {
-    const { contestName, image, participantsCount, shortDescription, tag } = contest;
+    const { contestName, image, participantsCount, shortDescription, tag, id } = contest;
     const description = shortDescription.slice(0, 100);
     return (
         <div>
@@ -19,7 +19,7 @@ const Contest = ({ contest }) => {
                 <div className="px-6 py-4 flex-grow">
                     <h1 className="text-xl font-semibold  ">Name: {contestName}</h1>
 
-                    <p className="py-2 ">{description}....</p>
+                    <p className="py-2 ">{description}<Link className="text-indigo-600" to={`/viewDetails/${id}`}>...</Link></p>
 
                     <div className="flex items-center mt-4 mb-6 ">
                         <MdOutlineAccountCircle className="text-2xl" />
@@ -28,7 +28,7 @@ const Contest = ({ contest }) => {
                     </div>
 
 
-                    <Link to='/'
+                    <Link to={`/viewDetails/${id}`}
                         className="group relative inline-block overflow-hidden border border-indigo-600 rounded-xl px-8 py-3 font-EBGaramond text-white  focus:outline-none focus:ring w-full flex justify-center"
                         href="#"
                     >

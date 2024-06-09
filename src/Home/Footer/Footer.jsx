@@ -5,7 +5,7 @@ const Footer = () => {
 
 
     return (
-        <div>
+        <div className="">
             <footer className="bg-black text-white
             ">
                 <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -29,11 +29,11 @@ const Footer = () => {
                     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                         <div className="flex flex-wrap justify-center mt-6 -mx-4 text-white">
 
-                            <ul className="flex gap-6">
+                            {/* <ul className="flex gap-6">
                                 <li><Link to='/' className="text-base">Home</Link></li>
                                 <li><Link to='/' className="text-base">All Context</Link></li>
 
-                            </ul>
+                            </ul> */}
                         </div>
 
                     </ul>
