@@ -12,7 +12,7 @@ const BannerF = () => {
                                 Contestify
                             </p>
                         </div>
-                        <h2 className="max-w-lg mb-6 font-EBGaramond  text-4xl font-bold tracking-tight  lg:text-6xl sm:leading-none">
+                        <h2 className="max-w-lg mb-6 font-EBGaramond  text-4xl font-bold tracking-tight  lg:text-6xl sm:leading-none ">
                             Unleash
                             <br className="hidden md:block" />
                             Your{' '}

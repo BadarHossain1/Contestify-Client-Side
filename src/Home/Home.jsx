@@ -1,6 +1,7 @@
+import AboutUs from "./About/AboutUs";
 import AdvertiseContest from "./AdvertiseContest/AdvertiseContest";
+import Banner from "./Banner/Banner";
 
-import BannerF from "./Banner/BannerF";
 import ContestCreators from "./ContestCreator/ContestCreators";
 import PopularContest from "./PopularContext/PopularContest";
 import Stats from "./Stats/Stats";
@@ -20,13 +21,16 @@ const Home = () => {
             </div>
             <div>
                 
-                <BannerF></BannerF>
+                <Banner></Banner>
             </div>
             <div>
                 <Stats></Stats>
             </div>
             <div>
                 <Trusted></Trusted>
+            </div>
+            <div>
+                <AboutUs></AboutUs>
             </div>
             <div className="">
                 <PopularContest></PopularContest>

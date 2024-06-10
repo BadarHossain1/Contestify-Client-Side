@@ -80,7 +80,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center  items-center ml-3">
-                        <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-800 mr-1" />
+                        <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-600 mr-1" />
                         <Link to='/' className=" font-[900]  font-EBGaramond text-2xl lg:text-4xl ">Contestify</Link>
                     </div>
                 </div>

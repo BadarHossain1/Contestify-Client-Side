@@ -2,51 +2,51 @@
 
 const Banner = () => {
     return (
-        <div className="max-w-[1170px] mx-auto ">
-            <div className="hero min-h-screen rounded-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
-                <div className="hero-overlay rounded-2xl bg-opacity-60  "></div>
-                <div className="hero-content text-center text-neutral-content rounded-2xl mt-8">
-                    <div className="bg-gradient-to-r from-indigo-500 to-blue-500  py-4 px-4 rounded-3xl">
-                        
-                        <h1 className=" text-white font-EBGaramond font-[900] hero-overlay bg-opacity-30   p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>
+        <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 ">
 
-                        <p className="mb-5 text-md max-w-4xl mx-auto text-white  rounded-b-3xl pb-3 px-3 font-bold">Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. </p>
-
-
-                        <div className="relative max-w-xl mx-auto pt-4 pb-4">
-                            <label htmlFor="Search" className="sr-only"> Search </label>
-
-                            <input
-                                type="text"
-                                id="Search"
-                                placeholder="    Search for Tags (Ex. coding...)"
-                                className="w-full rounded-xl border-gray-200 py-4 pe-10 shadow-sm sm:text-sm"
-                            />
-
-                            <span className="absolute inset-y-0 end-0 grid w-10 place-content-center btn-primary">
-                                <button type="button" className=" text-blue-600 font-extrabold hover:text-gray-700 mt-2">
-                                    <span className="sr-only">Search</span>
-
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="1.5"
-                                        stroke="currentColor"
-                                        className="h-4 w-4"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                                        />
-                                    </svg>
-                                </button>
-                            </span>
+            <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl font-EBGaramond">
+                <div className="mb-0 lg:mb-16 mt-1 lg:mt-12 lg:max-w-lg lg:pr-5">
+                    <div className="max-w-xl mb-6">
+                        <div>
+                            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider  uppercase rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 text-white">
+                                Contestify
+                            </p>
                         </div>
-                    <div className="hero-overlay bg-opacity-80 rounded-xl "></div>
+                        <h2 className="max-w-lg mb-6 font-EBGaramond  text-4xl font-bold tracking-tight  lg:text-6xl sm:leading-none">
+                            Unleash
+                            <br className="hidden md:block" />
+                            Your{' '}
+                            <span className="inline-block text-deep-purple-accent-400">
+                                Creativity
+                            </span>
+                        </h2>
+                        <p className="text-base text-gray-700 md:text-lg font-medium">
+                        Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. 
+                        </p>
                     </div>
+
+                <form className="flex flex-col items-center w-full mb-4 md:flex-row ">
+                    <input
+                        placeholder="Search for contest...(Ex.coding)"
+                        required
+                        type="text"
+                        className="flex-grow w-full h-12 px-4 mb-3 rounded-lg transition duration-200 bg-transparent border-2 border-gray-400 rounded appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-200 focus:outline-none focus:shadow-outline"
+                    />
+                    <button
+                        type="submit"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-gradient-to-r from-indigo-600 to-blue-500 focus:shadow-outline focus:outline-none"
+                    >
+                        Search
+                    </button>
+                </form>
                 </div>
+            </div>
+            <div className="inset-y-0 right-0 w-full max-w-xl px-4 mx-auto lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
+                <img
+                    className="object-cover w-full  rounded-xl shadow-lg lg:rounded-tl-2xl lg:rounded-bl-2xl lg:shadow-none h-96 mt-1 lg:mt-8"
+                    src="https://i.ibb.co/4Y71ys9/banner-pic.jpg"
+                    alt=""
+                />
             </div>
         </div>
     );
