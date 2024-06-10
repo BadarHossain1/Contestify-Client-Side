@@ -2,10 +2,10 @@
 
 const Banner = () => {
     return (
-        <div className="w-full mx-auto ">
-            <div className="hero min-h-screen " style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60  "></div>
-                <div className="hero-content text-center text-neutral-content rounded-xl mt-8">
+        <div className="max-w-[1170px] mx-auto ">
+            <div className="hero min-h-screen rounded-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/4Y71ys9/banner-pic.jpg)' }}>
+                <div className="hero-overlay rounded-2xl bg-opacity-60  "></div>
+                <div className="hero-content text-center text-neutral-content rounded-2xl mt-8">
                     <div className="bg-gradient-to-r from-indigo-500 to-blue-500  py-4 px-4 rounded-3xl">
                         
                         <h1 className=" text-white font-EBGaramond font-[900] hero-overlay bg-opacity-30   p-8 rounded-t-3xl  text-5xl lg:text-7xl  bg-transparent max-w-4xl mx-auto">Unleash Your Creativity!  </h1>

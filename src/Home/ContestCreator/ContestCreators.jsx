@@ -20,7 +20,7 @@ const ContestCreators = () => {
     }, [])
     return (
         <div className="max-w-[1170px]  mx-auto ">
-            <SectionTitle title={"Master Contest Creators"} text={"Explore the visionary works of our top contest creators, each a maestro in their own right. From captivating digital art to awe-inspiring photography and expressive abstracts, immerse yourself in a world of boundless creativity."}></SectionTitle>
+            <SectionTitle title={"Top Contest Creators"} text={"Explore the visionary works of our top contest creators, each a maestro in their own right. From captivating digital art to awe-inspiring photography and expressive abstracts, immerse yourself in a world of boundless creativity."}></SectionTitle>
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}

@@ -8,8 +8,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
 
     const { user, Logout, loading } = useContext(AuthContext);
-    const [change, setChange] = useState(false);
-
+ 
     const [theme, setTheme] = useState(() => {
         const localTheme = localStorage.getItem('theme');
         return localTheme || 'light';
@@ -25,11 +24,11 @@ const Navbar = () => {
 
         if (e.target.checked) {
             setTheme("dark")
-             setChange(true)
+       
         }
         else {
             setTheme("light")
-            setChange(false)
+            
         }
     }
 
@@ -68,10 +67,10 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="w-full mx-auto
+        <div className="w-full   text-black 
          font-EBGaramond ">
-            <div className={`navbar   ${change ? 'bg-black ' : 'bg-white'}  z-10 fixed shadow-xl`}>
-                <div className="navbar-start">
+            <div className={`navbar  z-10 max-w-[1170px]  mx-auto`} >
+                <div className="navbar-start ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -81,12 +80,12 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center  items-center ml-3">
-                        <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-500 mr-1" />
+                        <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-800 mr-1" />
                         <Link to='/' className=" font-[900]  font-EBGaramond text-2xl lg:text-4xl ">Contestify</Link>
                     </div>
                 </div>
                 <div className=" navbar-center   hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 font-bold">
                         {Navlink}
                     </ul>
                 </div>
@@ -142,8 +141,8 @@ const Navbar = () => {
                                     <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
 
                                 </label>
-                                <div className="navbar-end ">
-                                    <Link to='/login' className="btn bg-gradient-to-r from-indigo-500 to-blue-400 w-24 rounded-xl font-EBGaramond text-white">Login</Link>
+                                <div className="navbar-end border-none ml-2 ">
+                                    <Link to='/login' className="btn bg-gradient-to-r from-indigo-600 to-blue-400 w-24 rounded-xl font-EBGaramond text-white border-none font-extrabold">Login</Link>
                                 </div>
                             </div>
 

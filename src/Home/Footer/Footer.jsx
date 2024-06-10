@@ -1,4 +1,4 @@
-import { CiTrophy } from "react-icons/ci";
+
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="flex flex-col items-center text-center">
                             <a href="#">
                                 <div className="flex justify-center  items-center">
-                                    <GiLaurelsTrophy className="text-xl lg:text-4xl text-indigo-500 mr-1" />
+                                    <GiLaurelsTrophy className="text-xl lg:text-4xl text-indigo-500 " />
                                     <Link to='/' className=" font-extrabold   font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
                                 </div>
                             </a>
@@ -22,7 +22,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-center leading-relaxed text-gray-500">
+                    <p className="mx-auto mt-6 max-w-2xl text-center leading-relaxed text-white">
                         Welcome to Contestify, your premier platform for creating, discovering, and participating in a wide range of contests. Whether you're an aspiring creator or a seasoned competitor, Contestify offers you the tools to showcase your talents, engage with a dynamic community, and achieve recognition.
                     </p>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-gray-700 transition hover:text-gray-700/75"
+                                className="text-white transition hover:text-gray-700/75"
                             >
                                 <span className="sr-only">Facebook</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +61,7 @@ const Footer = () => {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-gray-700 transition hover:text-gray-700/75"
+                                className="text-white transition hover:text-gray-700/75"
                             >
                                 <span className="sr-only">Instagram</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -79,7 +79,7 @@ const Footer = () => {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-gray-700 transition hover:text-gray-700/75"
+                                className="text-white transition hover:text-gray-700/75"
                             >
                                 <span className="sr-only">Twitter</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -95,7 +95,7 @@ const Footer = () => {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-gray-700 transition hover:text-gray-700/75"
+                                className="text-white transition hover:text-gray-700/75"
                             >
                                 <span className="sr-only">GitHub</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -113,7 +113,7 @@ const Footer = () => {
                                 href="#"
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-gray-700 transition hover:text-gray-700/75"
+                                className="text-white transition hover:text-gray-700/75"
                             >
                                 <span className="sr-only">Dribbble</span>
                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

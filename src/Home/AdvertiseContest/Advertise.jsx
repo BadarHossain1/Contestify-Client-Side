@@ -3,7 +3,7 @@
 const Advertise = ({ advertise }) => {
     const { contestName, contestDescription, participateLink, winner, stats, image } = advertise;
     return (
-        <div className="max-w-2xl overflow-hidden  rounded-lg shadow-md dark:bg-gray-800 mx-auto" >
+        <div className="max-w-2xl overflow-hidden  rounded-lg shadow-2xl mb-2 dark:bg-gray-800 mx-auto" >
             <img className="object-cover w-full h-64" src={image} alt="Article"></img>
 
             <div className="p-6">

@@ -7,7 +7,7 @@ const Contest = ({ contest }) => {
     const description = shortDescription.slice(0, 100);
     return (
         <div>
-            <div className="w-full max-w-sm  overflow-hidden  rounded-lg shadow-lg mt-4 dark:bg-gray-800">
+            <div className="w-full max-w-sm  overflow-hidden  rounded-lg shadow-xl mt-4 dark:bg-gray-800">
                 <img className="object-cover object-center w-full h-56" src={image} alt="avatar"></img>
 
                 <div className="flex items-center px-6 py-3 ">

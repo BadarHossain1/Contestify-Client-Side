@@ -6,7 +6,7 @@ const AllContestCards = ({ contest }) => {
     const description = shortDescription.slice(0, 100);
     return (
 
-        <div className="rounded-xl">
+        <div className="rounded-2xl shadow-xl">
 
             <a href="#" className="group relative block overflow-hidden">
                 <button
@@ -20,7 +20,7 @@ const AllContestCards = ({ contest }) => {
                 <img
                     src={image}
                     alt=""
-                    className="h-64 w-full object-cover rounded-xl transition duration-500 group-hover:scale-105 sm:h-72"
+                    className="h-64 w-full object-cover rounded-2xl transition duration-500 group-hover:scale-105 sm:h-72"
                 />
 
                 <div className="relative  p-6 ">
