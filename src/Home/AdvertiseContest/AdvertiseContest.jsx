@@ -24,7 +24,7 @@ const AdvertiseContest = () => {
             .then(data => setData(data))
     }, [])
     return (
-        <div className=" max-w-[1170px] mx-auto ">
+        <div className=" max-w-[1280px] mx-auto ">
             <SectionTitle title={"Contest Showcase"} text={"Explore our latest contests, featuring inspiring winners and captivating entries. Dive into the world of creativity and join the excitement as we celebrate the winners and participants who make our contests extraordinary"}></SectionTitle>
             <Swiper
                 effect={'coverflow'}

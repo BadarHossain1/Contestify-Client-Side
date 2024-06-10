@@ -19,7 +19,7 @@ const ContestCreators = () => {
             .then(data => setData(data))
     }, [])
     return (
-        <div className="max-w-[1170px]  mx-auto ">
+        <div className="max-w-[1280px]  mx-auto ">
             <SectionTitle title={"Top Contest Creators"} text={"Explore the visionary works of our top contest creators, each a maestro in their own right. From captivating digital art to awe-inspiring photography and expressive abstracts, immerse yourself in a world of boundless creativity."}></SectionTitle>
             <Swiper
                 slidesPerView={4}

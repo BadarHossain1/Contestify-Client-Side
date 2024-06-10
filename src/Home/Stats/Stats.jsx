@@ -3,7 +3,7 @@
 const Stats = () => {
     return (
         <div>
-            <section className="p-6 mb-6 dark:bg-gray-100 dark:text-gray-800">
+            <section className="p-6 mb-6 dark:bg-gray-100 dark:text-gray-800 max-w-[1280px] mx-auto">
                 <div className="container grid grid-cols-1 gap-8 mx-auto sm:grid-cols-2 xl:grid-cols-4">
                     <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 text-white font-EBGaramond  bg-gradient-to-r from-indigo-600 to-blue-400">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-600">
