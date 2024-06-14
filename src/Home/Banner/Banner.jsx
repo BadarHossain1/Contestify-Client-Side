@@ -20,7 +20,7 @@ const Banner = () => {
                                 Creativity
                             </span>
                         </h2>
-                        <p className="text-base text-gray-700 md:text-lg font-medium">
+                        <p className="text-base  md:text-lg font-medium">
                         Welcome to our vibrant community of creators! Whether you are an artist, designer, writer, or innovator, our contest creation platform is your ultimate canvas to showcase your talent and passion. 
                         </p>
                     </div>

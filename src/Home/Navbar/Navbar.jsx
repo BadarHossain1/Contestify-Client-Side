@@ -8,7 +8,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
 
     const { user, Logout, loading } = useContext(AuthContext);
- 
+
     const [theme, setTheme] = useState(() => {
         const localTheme = localStorage.getItem('theme');
         return localTheme || 'light';
@@ -24,11 +24,11 @@ const Navbar = () => {
 
         if (e.target.checked) {
             setTheme("dark")
-       
+
         }
         else {
             setTheme("light")
-            
+
         }
     }
 
@@ -67,10 +67,12 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="w-full   text-black 
-         font-EBGaramond ">
+        <div className="w-full   
+         font-EBGaramond py-2 ">
+
             <div className={`navbar  z-10 `} >
-                <div className="navbar-start ">
+
+                <div className="  navbar-start  ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -79,16 +81,21 @@ const Navbar = () => {
                             {Navlink}
                         </ul>
                     </div>
-                    <div className="flex justify-center  items-center ml-3">
-                        <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-600 mr-1" />
-                        <Link to='/' className=" font-[900]  font-EBGaramond text-2xl lg:text-4xl ">Contestify</Link>
+                    <div className=" navbar-center   hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1 font-bold">
+                            {Navlink}
+                        </ul>
                     </div>
+
                 </div>
-                <div className=" navbar-center   hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-bold">
-                        {Navlink}
-                    </ul>
+
+                <div className="flex justify-center  items-center ml-3">
+                    <GiLaurelsTrophy className="text-3xl lg:text-[40px] text-indigo-600 mr-1" />
+                    <Link to='/' className=" font-[900]  font-EBGaramond text-2xl lg:text-[40px]">Contestify</Link>
                 </div>
+
+
+
                 {/* <div className="navbar-end">
                     <Link to='/login' className="btn bg-gradient-to-r from-indigo-500 to-blue-400 w-24 rounded-xl font-EBGaramond text-white">Login</Link>
                 </div> */}
