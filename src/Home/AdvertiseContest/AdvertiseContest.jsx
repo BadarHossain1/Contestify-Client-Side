@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 import Advertise from "./Advertise";
 
@@ -14,12 +14,13 @@ import 'swiper/css/pagination';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { axiosCommon } from "../../Hooks/useAxiosCommon";
 
 
 const AdvertiseContest = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('/advertise.json')
+        axiosCommon.get('/promotion')
             .then(res => res.data)
             .then(data => setData(data))
     }, [])

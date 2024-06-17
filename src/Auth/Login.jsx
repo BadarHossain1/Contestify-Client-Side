@@ -1,5 +1,5 @@
 import { GiLaurelsTrophy } from "react-icons/gi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../ContextProvider/ContextProvider";
@@ -14,6 +14,9 @@ const Login = () => {
     const { GoogleSignIn, Login, setLoading } = useContext(AuthContext);
 
     const navigate = useNavigate();
+    const location = useLocation()
+  
+    
 
 
     const {

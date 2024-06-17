@@ -2,7 +2,7 @@
   {
     "id": 1,
     "contestName": "Creative Image Design Contest",
-    "image": "https://source.unsplash.com/featured/?graphic-design",
+    "image": "https://i.ibb.co/n6ykCw4/image-Design1.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/image-design",
     "shortDescription": "Showcase your graphic design skills in our creative image design contest.",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "contestName": "Compelling Article Writing Contest",
-    "image": "https://source.unsplash.com/featured/?writing",
+    "image": "https://i.ibb.co/xgkZzjv/article-Writing.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/article-writing",
     "shortDescription": "Write compelling articles and win exciting prizes in our article writing contest.",
@@ -38,7 +38,7 @@
   {
     "id": 3,
     "contestName": "Innovative Marketing Strategy Contest",
-    "image": "https://source.unsplash.com/featured/?marketing",
+    "image": "https://i.ibb.co/W0tbX1N/Marketing-Strategy.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/marketing-strategy",
     "shortDescription": "Create innovative marketing strategies and compete with the best.",
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "contestName": "Digital Advertisement Creation Contest",
-    "image": "https://source.unsplash.com/featured/?digital-advertisement",
+    "image": "https://i.ibb.co/5h0NW9Q/advertisement.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/digital-advertisement",
     "shortDescription": "Design captivating digital ads in our digital advertisement contest.",
@@ -74,7 +74,7 @@
   {
     "id": 5,
     "contestName": "Best Book Review Contest Special",
-    "image": "https://source.unsplash.com/featured/?books",
+    "image": "https://i.ibb.co/V3Ym3Bd/book-Review.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/book-review",
     "shortDescription": "Write captivating book reviews and win in our book review contest.",
@@ -92,7 +92,7 @@
   {
     "id": 6,
     "contestName": "Innovative Business Idea Contest",
-    "image": "https://source.unsplash.com/featured/?business",
+    "image": "https://i.ibb.co/SsZBmnQ/business-Idea.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/business-idea",
     "shortDescription": "Pitch your innovative business ideas and stand a chance to win.",
@@ -110,7 +110,7 @@
   {
     "id": 7,
     "contestName": "Captivating Movie Review Contest",
-    "image": "https://source.unsplash.com/featured/?movies",
+    "image": "https://i.ibb.co/3vFPcWj/movie-Review.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/movie-review",
     "shortDescription": "Share your thoughts on the latest movies in our movie review contest.",
@@ -128,7 +128,7 @@
   {
     "id": 8,
     "contestName": "Creative Digital Advertisement Contest",
-    "image": "https://source.unsplash.com/featured/?advertisement",
+    "image": "https://i.ibb.co/5h0NW9Q/advertisement.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/digital-advertisement-creative",
     "shortDescription": "Design creative digital ads and showcase your talent.",
@@ -143,28 +143,11 @@
     "userImage": "https://source.unsplash.com/featured/?person",
     "tags": "Digital Advertisement Contests"
   },
-  {
-    "id": 9,
-    "contestName": "Strategic Marketing Challenge",
-    "image": "https://source.unsplash.com/featured/?strategy",
-    "participantsCount": 0,
-    "detailsButton": "/contest-details/marketing-strategy-challenge",
-    "shortDescription": "Develop strategic marketing plans and compete to win.",
-    "description": "Join our Strategic Marketing Challenge and develop effective marketing strategies. Compete with others and win a top prize.",
-    "prize": "$700",
-    "winner": {
-      "name": "Robert Clark",
-      "image": "https://source.unsplash.com/featured/?person"
-    },
-    "deadline": "2024-08-05T00:00:00Z",
-    "userName": "Robert Clark",
-    "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Marketing Strategy"
-  },
+
   {
     "id": 10,
     "contestName": "Gaming Review Writing Challenge",
-    "image": "https://source.unsplash.com/featured/?gaming",
+    "image": "https://i.ibb.co/kGjPM5g/game-Review.jpg",
     "participantsCount": 0,
     "detailsButton": "/contest-details/gaming-review",
     "shortDescription": "Share your gaming insights in our gaming review writing challenge.",

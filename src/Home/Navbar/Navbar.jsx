@@ -81,17 +81,18 @@ const Navbar = () => {
                             {Navlink}
                         </ul>
                     </div>
-                    <div className=" navbar-center   hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 font-bold">
-                            {Navlink}
-                        </ul>
+                    <div className="flex justify-center bg-gradient-to-r p-2 rounded-xl from-indigo-500 to-blue-400  items-center ml-3">
+                        <GiLaurelsTrophy className="text-3xl lg:text-[40px] text-white mr-1" />
+                        <Link to='/' className=" font-[900] text-white font-EBGaramond text-2xl lg:text-[40px]">Contestify</Link>
                     </div>
+
 
                 </div>
 
-                <div className="flex justify-center  items-center ml-3">
-                    <GiLaurelsTrophy className="text-3xl lg:text-[40px] text-indigo-600 mr-1" />
-                    <Link to='/' className=" font-[900]  font-EBGaramond text-2xl lg:text-[40px]">Contestify</Link>
+                <div className=" navbar-center   hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1 font-bold">
+                        {Navlink}
+                    </ul>
                 </div>
 
 
@@ -101,7 +102,7 @@ const Navbar = () => {
                 </div> */}
 
                 {
-                    loading ? <div className="w-1/2 flex justify-end items-end mr-6"><span className="loading loading-spinner loading-xl bg-[#aa8453]"></span></div> : <div className="navbar-end">
+                    loading ? <div className="w-1/2 flex justify-end items-end mr-6"><span className="loading loading-spinner loading-xl bg-gradient-to-r from-indigo-500 to-blue-300"></span></div> : <div className="navbar-end">
 
                         {
                             user ? <div className="flex">
@@ -122,7 +123,7 @@ const Navbar = () => {
                                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle mr-1 md:mr-3 border-2 rounded-full w-[50px] h-[30px] md:w-[60px] md:h-[60px] flex items-center justify-center  avatar tooltip ">
                                         <div className=" " >
                                             {
-                                                user ? <img src={user?.photoURL || "https://lh3.googleusercontent.com/a/ACg8ocLmdRTwh59_Ti2QrsS6UfK6gtDpYy3h6cTFkhdJE6EgMALVtwSn=s96-c"} alt="User's Photo" className="w-full h-full rounded-full" /> : <FaRegUserCircle className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
+                                                user ? <img src={user?.photoURL} alt="User's Photo" className="w-full h-full rounded-full" /> : <FaRegUserCircle className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
                                             }
                                             {
 
@@ -149,7 +150,7 @@ const Navbar = () => {
 
                                 </label>
                                 <div className="navbar-end border-none ml-2 ">
-                                    <Link to='/login' className="btn bg-gradient-to-r from-indigo-600 to-blue-400 w-24 rounded-xl font-EBGaramond text-white border-none font-extrabold">Login</Link>
+                                    <Link to='/login' className="btn bg-gradient-to-r from-indigo-500 to-blue-400 w-24 rounded-xl font-EBGaramond text-white border-none font-extrabold">Login</Link>
                                 </div>
                             </div>
 
