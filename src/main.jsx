@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
@@ -15,6 +15,11 @@ import Login from './Auth/Login';
 import Register from './Auth/Register';
 import ContextProvider from './ContextProvider/ContextProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Dashboard from './Dashboard/Dashboard';
+
+const queryClient = new QueryClient()
+
 
 
 const router = createBrowserRouter([
@@ -46,11 +51,17 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>
+  }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ContextProvider>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>,
-  </ContextProvider>
+  <QueryClientProvider client={queryClient}>
+    <ContextProvider>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>,
+    </ContextProvider>
+  </QueryClientProvider>
 )

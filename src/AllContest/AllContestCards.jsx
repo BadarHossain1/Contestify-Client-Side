@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 
 const AllContestCards = ({ contest }) => {
+    console.log(contest)
     const { contestName, image, participantsCount, shortDescription, tags, userName, userImage, id } = contest;
-    const description = shortDescription.slice(0, 100);
+    
     return (
 
         <div className="rounded-2xl shadow-xl">
@@ -29,7 +30,7 @@ const AllContestCards = ({ contest }) => {
                     <h3 className="mt-4 text-lg font-medium ">{contestName}</h3>
 
                     <p className="mt-1.5 text-sm ">Participants: {participantsCount}</p>
-                    <p className="py-2 ">{description}....</p>
+                    <p className="py-2 ">{shortDescription}....</p>
 
                     <form className="mt-4">
                         <Link to={`/viewDetails/${id}`}
