@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 const AllContestCards = ({ contest }) => {
     console.log(contest)
-    const { contestName, image, participantsCount, shortDescription, tags, userName, userImage, id } = contest;
+    // const { contestName, image, participantsCount, shortDescription, tags, userName, userImage, id } = contest;
+    const {Name, Image, Description , deadline, Price, TextInstruction, CreatorEmail, CreatorName, Category, participantsCount, _id} = contest;
     
     return (
 
@@ -19,21 +20,21 @@ const AllContestCards = ({ contest }) => {
                 </button>
 
                 <img
-                    src={image}
+                    src={Image}
                     alt=""
                     className="h-64 w-full object-cover rounded-2xl transition duration-500 group-hover:scale-105 sm:h-72"
                 />
 
                 <div className="relative  p-6 ">
-                    <span className="whitespace-nowrap bg-gradient-to-r from-indigo-500 to-blue-400 px-3 py-1.5 text-xs font-medium text-white"> {tags} </span>
+                    <span className="whitespace-nowrap bg-gradient-to-r from-indigo-500 to-blue-400 px-3 py-1.5 text-xs font-medium text-white"> {Category} </span>
 
-                    <h3 className="mt-4 text-lg font-medium ">{contestName}</h3>
+                    <h3 className="mt-4 text-lg font-medium ">{Name}</h3>
 
                     <p className="mt-1.5 text-sm ">Participants: {participantsCount}</p>
-                    <p className="py-2 ">{shortDescription}....</p>
+                    <p className="py-2 ">{Description}....</p>
 
                     <form className="mt-4">
-                        <Link to={`/viewDetails/${id}`}
+                        <Link to={`/viewDetails/${_id}`}
                             className="group relative inline-block overflow-hidden border border-indigo-600 rounded-xl px-8 py-3 font-EBGaramond text-white  focus:outline-none focus:ring w-full flex justify-center"
                             href="#"
                         >

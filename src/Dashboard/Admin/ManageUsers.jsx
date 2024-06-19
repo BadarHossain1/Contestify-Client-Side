@@ -14,7 +14,23 @@ const ManageUsers = () => {
         }
     })
 
-    console.log(data);
+    const handleSelect = (email, role) => {
+        console.log(role);
+        console.log(email);
+      
+        axiosSecure.patch(`/users/update`, { email, role })
+          .then(res => {
+            console.log(res.data);
+            refetch();
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      }
+      
+    
+
+    
 
     return (
         <div>
@@ -64,6 +80,7 @@ const ManageUsers = () => {
                                     name="HeadlineAct"
                                     id="HeadlineAct"
                                     className="mt-1.5 rounded-lg border-gray-300  text-gray-700 sm:text-sm"
+                                    onChange={(e) => handleSelect(user?.email, e.target.value)}
                                 >
                                     <option value="">Please select Role</option>
                                     <option value="user">User</option>

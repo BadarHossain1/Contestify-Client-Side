@@ -1,38 +1,30 @@
-import axios from "axios";
+
+
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+
+import { axiosSecure } from "../../Hooks/useAxiosSecure";
 
 
 const ViewDetails = () => {
 
-    const { id } = useParams();
+    
+    const data = useLoaderData();
+    console.log(data);
 
+    const details = data[0];
 
-    const [details, setDetails] = useState([]);
-     const [updated, setUpdated] = useState([]);
-
-    useEffect(() => {
-
-        axios.get('/contest.json')
-            .then(res => {
-                console.log(res.data)
-                setDetails(res.data)
-            })
-            .catch(error => console.log(error))
-
-    }, [])
-
-    useEffect(() => {
-        const findDetails = details.find(detail => detail.id.toString() === id)
-        console.log("filtered", findDetails)
-        setUpdated(findDetails);
-    }, [id, details])
-
-    // const { contestName, image, participantsCount, shortDescription, tags, userName, userImage } = details;
+    console.log('details', details);
 
 
 
 
+   
+
+    
+    
+
+   
 
 
     return (
@@ -40,10 +32,10 @@ const ViewDetails = () => {
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={updated?.image}></img>
+                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={details?.Image}></img>
                         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                            <h2 className="text-sm title-font text-gray-500 tracking-widest">{updated?.tags}</h2>
-                            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{updated?.contestName}</h1>
+                            <h2 className="text-sm title-font text-gray-500 tracking-widest">{details?.Category}</h2>
+                            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{details?.Name}</h1>
                             <div className="flex mb-4">
                                 <span className="flex items-center">
                                     <svg fill="currentColor" stroke="currentColor" className="w-4 h-4 text-blue-500" viewBox="0 0 24 24">
@@ -61,7 +53,7 @@ const ViewDetails = () => {
                                     <svg fill="none" stroke="currentColor" className="w-4 h-4 text-blue-500" viewBox="0 0 24 24">
                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                     </svg>
-                                    <span className="text-gray-600 ml-3">4 Reviews</span>
+                                    <span className="text-gray-600 ml-3">6 Reviews</span>
                                 </span>
                                 <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                                     <a className="text-gray-500">
@@ -81,13 +73,13 @@ const ViewDetails = () => {
                                     </a>
                                 </span>
                             </div>
-                            <p className="leading-relaxed">{updated?.shortDescription}</p>
+                            <p className="leading-relaxed">{details?.Description}</p>
                             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                                
-                                
+
+
                             </div>
                             <div className="flex">
-                                <span className="title-font font-medium text-2xl text-gray-900">Prize: {updated?.prize}</span>
+                                <span className="title-font font-medium text-2xl text-green-400">Prize: {details?.Price}$$</span>
                                 <button className="flex ml-auto text-white bg-gradient-to-r from-indigo-400  to-blue-400 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">Register</button>
                                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                     <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">

@@ -50,7 +50,8 @@ const router = createBrowserRouter([
       }
       , {
         path: '/viewDetails/:id',
-        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/AllContest/id/${params.id}`)
       },
       {
         path: '/login',
@@ -87,7 +88,7 @@ const router = createBrowserRouter([
       element: <ContestSubmittedPage></ContestSubmittedPage>
     }
       , {
-      path: 'CreatedContest',
+      path: 'ContestCreated',
       element: <MyCreatedContest></MyCreatedContest>
     },
     {

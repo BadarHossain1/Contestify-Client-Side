@@ -56,6 +56,7 @@ const Register = () => {
         registerUser(data.email, password)
             .then(result => {
                 console.log(result.user);
+                navigate('/');
                 notify(true);
 
                 setInfo({ displayName: Name, photoURL: Photo });
@@ -63,7 +64,7 @@ const Register = () => {
                     .then(result => {
                         console.log(result.user);
                         //navigate here to home
-                        navigate('/');
+                        
                         notify(true);
 
 
@@ -128,7 +129,7 @@ const Register = () => {
 
 
 
-            <section className="bg-white shadow-xl">
+            <section className="bg-white shadow-xl ">
                 <div className="lg:grid lg:min-h-screen lg:grid-cols-12     ">
                     <aside className="relative flex h-32 items-end lg:col-span-5 lg:h-full xl:col-span-6">
                         <img
@@ -143,7 +144,7 @@ const Register = () => {
                     >
                         <div className="max-w-xl lg:max-w-3xl">
 
-                            <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+                            <h1 className="mt-6 text-2xl font-bold  sm:text-3xl md:text-4xl">
                                 <div className="flex justify-start  items-center">
                                     <GiLaurelsTrophy className="text-3xl lg:text-4xl text-indigo-500 mr-1" />
                                     <Link className=" font-[900]  font-EBGaramond text-3xl lg:text-4xl">Register</Link>
@@ -151,7 +152,7 @@ const Register = () => {
 
                             </h1>
 
-                            <p className="mt-4 leading-relaxed text-gray-500">
+                            <p className="mt-4 leading-relaxed ">
                                 Login To Continue your exploration.
                             </p>
 
@@ -172,7 +173,7 @@ const Register = () => {
 
 
                                         <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs  transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
                                             Full Name
                                         </span>
@@ -194,7 +195,7 @@ const Register = () => {
 
 
                                         <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs  transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
                                             Photo
                                         </span>
@@ -218,7 +219,7 @@ const Register = () => {
 
 
                                         <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs  transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
                                             Email
                                         </span>
@@ -243,7 +244,7 @@ const Register = () => {
 
 
                                         <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
                                             password
                                         </span>
@@ -268,7 +269,7 @@ const Register = () => {
 
 
                                         <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs  transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
                                         >
                                             Password Confirmation
                                         </span>
@@ -305,7 +306,7 @@ const Register = () => {
                                         By creating an account, you agree to our
                                         <a href="#" className="text-gray-700 underline"> terms and conditions </a>
                                         and
-                                        <a href="#" className="text-gray-700 underline">privacy policy</a>.
+                                        <a href="#" className=" underline">privacy policy</a>.
                                     </p>
                                 </div>
 

@@ -61,7 +61,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error);
-                toast.error('Error creating User', {
+                toast.error('User Not found', {
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
