@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import { GoogleAuthProvider } from "firebase/auth";
 
 import app from "../Firebase/firebase.config";
+import { axiosCommon } from "../Hooks/useAxiosCommon";
 
 
 
@@ -55,6 +56,20 @@ const ContextProvider = ({ children }) => {
         signOut(auth);
     }
 
+    // save user
+    const saveUser = async user => {
+        const currentUser = {
+            Name: user?.displayName,
+            image: user?.photoURL,
+            email: user?.email,
+            role: 'user',
+            status: 'Verified',
+        }
+        const { data } = await axiosCommon.put('/user', currentUser)
+        
+        return data;
+    }
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -65,7 +80,7 @@ const ContextProvider = ({ children }) => {
                 setLoading(false);
                 setUser(currentUser);
                 setLoading(false);
-                // ...
+                saveUser(currentUser);
             } else {
                 setUser(null);
                 setLoading(false)

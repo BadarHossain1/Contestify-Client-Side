@@ -63,8 +63,8 @@ const Register = () => {
                     .then(result => {
                         console.log(result.user);
                         //navigate here to home
+                        navigate('/');
                         notify(true);
-                        navigate(from);
 
 
 

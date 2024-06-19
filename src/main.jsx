@@ -17,6 +17,16 @@ import ContextProvider from './ContextProvider/ContextProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Dashboard from './Dashboard/Dashboard';
+import DashboardLayout from './Dashboard/DashboardLayout';
+import MyParticipatedContest from './Dashboard/User/MyParticipatedContest';
+import MyWinningContest from './Dashboard/User/MyWinningContest';
+import User from './Dashboard/User/User';
+import AddContest from './Dashboard/Creator/AddContest';
+import ContestSubmittedPage from './Dashboard/Creator/ContestSubmittedPage';
+import MyCreatedContest from './Dashboard/Creator/MyCreatedContest';
+import ManageUsers from './Dashboard/Admin/ManageUsers';
+import ManageContest from './Dashboard/Admin/ManageContest';
+import MyProfile from './Dashboard/User/MyProfile';
 
 const queryClient = new QueryClient()
 
@@ -53,7 +63,45 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>
+    element: <DashboardLayout></DashboardLayout>,
+    children: [{
+      path: 'participated',
+      element: <MyParticipatedContest></MyParticipatedContest>
+    },
+    {
+      path: 'winning',
+      element: <MyWinningContest></MyWinningContest>
+
+    },
+    {
+      path: 'user',
+      element: <MyProfile></MyProfile>
+    },
+
+    {
+      path: 'AddContest',
+      element: <AddContest></AddContest>
+    },
+    {
+      path: 'ContestSubmitted',
+      element: <ContestSubmittedPage></ContestSubmittedPage>
+    }
+      , {
+      path: 'CreatedContest',
+      element: <MyCreatedContest></MyCreatedContest>
+    },
+    {
+      path: 'ManageUsers',
+      element: <ManageUsers></ManageUsers>
+    },
+    {
+      path: 'ManageContest',
+      element: <ManageContest></ManageContest>
+    }
+    
+
+
+    ]
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
