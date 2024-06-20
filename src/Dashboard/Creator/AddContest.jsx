@@ -36,6 +36,7 @@ const AddContest = () => {
         const Category = option;
         const deadline = startDate;
         const participantsCount = 0;
+        const status = 'Pending';
 
         const contest = {
             Name,
@@ -48,6 +49,7 @@ const AddContest = () => {
             Category,
             deadline,
             participantsCount,
+            status,
 
         }
 

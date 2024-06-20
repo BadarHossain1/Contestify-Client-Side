@@ -35,16 +35,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         Logout()
-            .then(res => {
-                console.log(res)
-                // axios.post('http://localhost:5173/logout', user, {
-                //     withCredentials: true
-                // })
-                //     .then(res => res.data);
-            }
-
-
-            )
+            
             .catch(error => console.log(error))
     }
 

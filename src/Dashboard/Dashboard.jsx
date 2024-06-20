@@ -7,11 +7,15 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { CiLogout } from "react-icons/ci";
 import Creator from "./Creator/Creator";
 import Admin from "./Admin/Admin";
+import useRole from "../Hooks/useRoleUser";
 
 
 const Dashboard = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const { Logout } = useContext(AuthContext);
+
+    const [role, isLoading] = useRole();
+    console.log(role); 
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -60,15 +64,21 @@ const Dashboard = () => {
                             <Link to='/' className=" font-[900] text-white font-EBGaramond text-2xl lg:text-2xl">Contestify</Link>
                         </div>
                         <ul className="space-y-2 font-medium py-5">
-                            <div className="mt-5">
+                            {
+                                role === 'user' && <div className="mt-5">
                                 <User></User>
-                            </div>
-                            <div className="mt-5">
+                            </div> 
+                            }
+                            {
+                                role === 'creator' && <div className="mt-5">
                                 <Creator></Creator>
                             </div>
-                            <div className="mt-5">
+                            }
+                            {
+                                role === 'Admin' && <div className="mt-5">
                                 <Admin></Admin>
                             </div>
+                            }
                             
                             
 

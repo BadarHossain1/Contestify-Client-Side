@@ -79,7 +79,7 @@ const ContextProvider = ({ children }) => {
                 console.log("User changed", currentUser);
                 setLoading(false);
                 setUser(currentUser);
-                setLoading(false);
+                
                 saveUser(currentUser);
             } else {
                 setUser(null);

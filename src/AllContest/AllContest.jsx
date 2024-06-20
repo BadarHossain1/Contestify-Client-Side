@@ -2,16 +2,24 @@ import SectionTitle from "../Home/SectionTitle/SectionTitle";
 import AllContestCards from "./AllContestCards";
 import { axiosSecure } from "../Hooks/useAxiosSecure";
 import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from "react";
 
 const AllContest = () => {
+    const [approved, setApproved] = useState([]);
     const { data, isLoading, error } = useQuery({
         queryKey: ['contest'],
         queryFn: async () => {
-            const response = await axiosSecure.get('/AllContest');
-            return response.data;
+            const {data} = await axiosSecure.get('/AllContest');
+            const Approved = data.filter((contest) => contest?.status === 'Approved');
+            setApproved(Approved);
+            return data;
         }
     });
 
+    
+
+
+    
    
 
     if (isLoading) {
@@ -40,7 +48,7 @@ const AllContest = () => {
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3 max-w-[1170px] mx-auto">
-                {data.map((contest, index) => (
+                {approved.map((contest, index) => (
                     <AllContestCards key={index} contest={contest} />
                 ))}
             </div>

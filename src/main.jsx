@@ -78,7 +78,7 @@ const router = createBrowserRouter([
       path: 'user',
       element: <MyProfile></MyProfile>
     },
-
+    
     {
       path: 'AddContest',
       element: <AddContest></AddContest>
@@ -91,6 +91,7 @@ const router = createBrowserRouter([
       path: 'ContestCreated',
       element: <MyCreatedContest></MyCreatedContest>
     },
+      
     {
       path: 'ManageUsers',
       element: <ManageUsers></ManageUsers>
