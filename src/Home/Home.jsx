@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AboutUs from "./About/AboutUs";
 import AdvertiseContest from "./AdvertiseContest/AdvertiseContest";
 import Banner from "./Banner/Banner";
@@ -14,6 +15,17 @@ import Tag from "./Tag/Tag";
 
 
 const Home = () => {
+
+    const [search, setSearch] = useState('');
+    console.log('from search', search);
+
+    const handleSearchString = (string) =>{
+        setSearch(string);
+    }
+
+
+
+
     return (
         <div>
             <div>
@@ -21,7 +33,7 @@ const Home = () => {
             </div>
             <div>
                 
-                <Banner></Banner>
+                <Banner handleSearchString={handleSearchString}></Banner>
             </div>
             <div>
                 <Stats></Stats>
@@ -33,7 +45,7 @@ const Home = () => {
                 <AboutUs></AboutUs>
             </div>
             <div className="">
-                <PopularContest></PopularContest>
+                <PopularContest search={search}></PopularContest>
             </div>
             <div className="">
                 <AdvertiseContest ></AdvertiseContest>

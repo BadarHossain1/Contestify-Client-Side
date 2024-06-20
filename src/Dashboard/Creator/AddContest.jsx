@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import { Bounce, toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 
 
@@ -60,6 +61,13 @@ const AddContest = () => {
                 console.log(res.data)
 
                 //sweet alert
+                Swal.fire({
+                    position: "top-start",
+                    icon: "success",
+                    title: "Contest Has been Added. Please Wait for Admins Approval",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
 
 
             })

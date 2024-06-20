@@ -27,6 +27,8 @@ import MyCreatedContest from './Dashboard/Creator/MyCreatedContest';
 import ManageUsers from './Dashboard/Admin/ManageUsers';
 import ManageContest from './Dashboard/Admin/ManageContest';
 import MyProfile from './Dashboard/User/MyProfile';
+import AdminRoute from './Routes/AdminRoute';
+import HostRoute from './Routes/HostRoute';
 
 const queryClient = new QueryClient()
 
@@ -81,24 +83,24 @@ const router = createBrowserRouter([
     
     {
       path: 'AddContest',
-      element: <AddContest></AddContest>
+      element: <PrivateRoute><HostRoute><AddContest></AddContest></HostRoute></PrivateRoute>
     },
     {
       path: 'ContestSubmitted',
-      element: <ContestSubmittedPage></ContestSubmittedPage>
+      element: <PrivateRoute><HostRoute><ContestSubmittedPage></ContestSubmittedPage></HostRoute></PrivateRoute>
     }
       , {
       path: 'ContestCreated',
-      element: <MyCreatedContest></MyCreatedContest>
+      element: <PrivateRoute><HostRoute><MyCreatedContest></MyCreatedContest></HostRoute></PrivateRoute>
     },
       
     {
       path: 'ManageUsers',
-      element: <ManageUsers></ManageUsers>
+      element: <AdminRoute><PrivateRoute><ManageUsers></ManageUsers></PrivateRoute></AdminRoute>
     },
     {
       path: 'ManageContest',
-      element: <ManageContest></ManageContest>
+      element: <AdminRoute><PrivateRoute><ManageContest></ManageContest></PrivateRoute></AdminRoute>
     }
     
 

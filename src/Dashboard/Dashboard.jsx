@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import User from "./User/User";
 import { GiLaurelsTrophy } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextProvider/ContextProvider";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiLogout } from "react-icons/ci";
@@ -12,7 +12,8 @@ import useRole from "../Hooks/useRoleUser";
 
 const Dashboard = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const { Logout } = useContext(AuthContext);
+    const { Logout, setLoading } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [role, isLoading] = useRole();
     console.log(role); 
@@ -23,17 +24,10 @@ const Dashboard = () => {
 
     const handleLogout = () => {
         Logout()
-            .then(res => {
-                console.log(res)
-                // axios.post('http://localhost:5173/logout', user, {
-                //     withCredentials: true
-                // })
-                //     .then(res => res.data);
-            }
-
-
-            )
             .catch(error => console.log(error))
+
+        navigate('/')
+        setLoading(false);
     }
 
     return (

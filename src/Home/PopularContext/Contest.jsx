@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 
 
 const Contest = ({ contest }) => {
-    const { contestName, image, participantsCount, shortDescription, tag, id } = contest;
-    const description = shortDescription.slice(0, 100);
+    const { Name, Image, participantsCount, Description, Category, _id } = contest;
+    const description = Description.slice(0,50)
     return (
         <div>
             <div className="w-full max-w-sm  overflow-hidden  rounded-lg shadow-xl mt-4 dark:bg-gray-800">
-                <img className="object-cover object-center w-full h-56" src={image} alt="avatar"></img>
+                <img className="object-cover object-center w-full h-56" src={Image} alt="avatar"></img>
 
                 <div className="flex items-center px-6 py-3 ">
 
 
-                    <h1 className="mx-3 text-lg font-semibold text-white">{tag}</h1>
+                    <h1 className="mx-3 text-lg font-semibold text-white">{Category}</h1>
                 </div>
 
                 <div className="px-6 py-4 flex-grow">
-                    <h1 className="text-xl font-semibold  ">Name: {contestName}</h1>
+                    <h1 className="text-xl font-semibold  ">Name: {Name}</h1>
 
-                    <p className="py-2 ">{description}<Link className="text-indigo-600" to={`/viewDetails/${id}`}>...</Link></p>
+                    <p className="py-2 ">{description}<Link className="text-indigo-600" to={`/viewDetails/${_id}`}>...</Link></p>
 
                     <div className="flex items-center mt-4 mb-6 ">
                         <MdOutlineAccountCircle className="text-2xl" />
@@ -28,7 +28,7 @@ const Contest = ({ contest }) => {
                     </div>
 
 
-                    <Link to={`/viewDetails/${id}`}
+                    <Link to={`/viewDetails/${_id}`}
                         className="group relative inline-block overflow-hidden border border-indigo-600 rounded-xl px-8 py-3 font-EBGaramond text-white  focus:outline-none focus:ring w-full flex justify-center"
                         href="#"
                     >

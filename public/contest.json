@@ -105,7 +105,7 @@
     "deadline": "2024-08-15T00:00:00Z",
     "userName": "Sarah Martinez",
     "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Business Idea Contests"
+    "tags": "BusinessIdeaContests"
   },
   {
     "id": 7,
@@ -123,7 +123,7 @@
     "deadline": "2024-07-10T00:00:00Z",
     "userName": "David Garcia",
     "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Movie Review"
+    "tags": "MovieReview"
   },
   {
     "id": 8,
@@ -141,7 +141,7 @@
     "deadline": "2024-06-25T00:00:00Z",
     "userName": "Anna Lee",
     "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Digital Advertisement Contests"
+    "tags": "DigitalAdvertisementContests"
   },
 
   {
@@ -160,6 +160,6 @@
     "deadline": "2024-07-15T00:00:00Z",
     "userName": "Emily Davis",
     "userImage": "https://source.unsplash.com/featured/?person",
-    "tags": "Gaming Review"
+    "tags": "GamingReview"
   }
 ]

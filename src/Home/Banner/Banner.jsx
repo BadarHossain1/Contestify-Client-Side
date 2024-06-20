@@ -1,6 +1,13 @@
 
 
-const Banner = () => {
+const Banner = ({handleSearchString}) => {
+
+    const handleSearch = (e)=>{
+        e.preventDefault();
+        const search = e.target.search.value;
+        handleSearchString(search);
+        
+    }
     return (
         <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 ">
 
@@ -25,12 +32,14 @@ const Banner = () => {
                         </p>
                     </div>
 
-                <form className="flex flex-col items-center w-full mb-4 md:flex-row ">
+                <form onSubmit={handleSearch} className="flex flex-col items-center w-full mb-4 md:flex-row ">
                     <input
-                        placeholder="Search for contest...(Ex.coding)"
+                        
+                        placeholder="Search for contest...(Ex.BookReview)"
                         required
                         type="text"
-                        className="flex-grow w-full h-12 px-4 mb-3 rounded-lg transition duration-200 bg-transparent border-2 border-gray-400 rounded appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-200 focus:outline-none focus:shadow-outline"
+                        name="search"
+                        className="flex-grow w-full h-12 px-4 mb-3 rounded-lg transition duration-200 bg-transparent border-2 border-gray-400  appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-200 focus:outline-none focus:shadow-outline"
                     />
                     <button
                         type="submit"

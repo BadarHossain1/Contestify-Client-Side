@@ -7,7 +7,7 @@ const AboutUs = () => {
             <section className=" dark:bg-gray-900 max-w-[1280px] mx-auto">
                 <div className="container px-6 py-10 mx-auto">
                     <div className="lg:-mx-6 lg:flex lg:items-center">
-                        <img className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]" src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></img>
+                        <img className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]" src="https://i.ibb.co/SsZBmnQ/business-Idea.jpg" alt=""></img>
 
                         <div className="mt-8 lg:w-1/2  lg:mt-0 ">
                             <p className="text-5xl font-semibold text-blue-500 ">“</p>
