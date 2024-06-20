@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const ManageContest = () => {
@@ -26,6 +27,38 @@ const ManageContest = () => {
             refetch();
 
         })
+    }
+
+
+    const handleComment = async (_id) =>{
+        const { value: text } = await Swal.fire({
+            input: "textarea",
+            inputLabel: "Comment",
+            inputPlaceholder: "Type your Comment here...",
+            inputAttributes: {
+              "aria-label": "Type your comment here"
+            },
+            showCancelButton: true
+          });
+          if (text) {
+            Swal.fire(text);
+
+            const details = {
+                _id, text
+            }
+
+            axiosSecure.put('/comment', details)
+            .then(res=>{
+                console.log(res.data)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            })
+          }
     }
 
 
@@ -78,7 +111,9 @@ const ManageContest = () => {
                             </td>
                             <td className="badge badge-ghost bg-gradient-to-r text-white from-indigo-600 to-blue-400 mt-6 my-auto">{user?.status}</td>
 
-                            <td><Link to='' className="btn btn-ghost btn-xs rounded-xl bg-blue-200">Comment</Link></td>
+                            <td><button onClick={(e)=>{
+                                handleComment(user?._id)
+                            }}  className="btn btn-ghost btn-xs rounded-xl bg-blue-200">Comment</button></td>
                             {
                                 user?.status === 'Pending' ? <td><button onClick={()=>{
                                     handleConfirm(user?._id)

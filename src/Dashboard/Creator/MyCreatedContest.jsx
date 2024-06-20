@@ -4,6 +4,8 @@ import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const MyCreatedContest = () => {
@@ -12,25 +14,46 @@ const MyCreatedContest = () => {
 
 
 
-    
-        // axiosSecure.get(`/MyCreatedContest/${user?.email}`)
-        //     .then(res => setContest(res.data))
-        //     .catch(err => console.error(err))
 
-        const {data, refetch} = useQuery({
-            queryKey: ['MyCreatedContest', user?.email],
-            queryFn: async () => {
-                const response = await axiosSecure.get(`/MyCreatedContest/${user?.email}`);
-                setContest(response.data);
-            
-                return response.data;
+    // axiosSecure.get(`/MyCreatedContest/${user?.email}`)
+    //     .then(res => setContest(res.data))
+    //     .catch(err => console.error(err))
+
+    const { data, refetch } = useQuery({
+        queryKey: ['MyCreatedContest', user?.email],
+        queryFn: async () => {
+            const response = await axiosSecure.get(`/MyCreatedContest/${user?.email}`);
+            setContest(response.data);
+
+            return response.data;
+            refetch();
+
+        }
+
+    })
+
+
+    const handleDelete = (_id) => {
+        axiosSecure.delete(`/delete/${_id}`)
+            .then(res => {
+                console.log(res.data)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Contest has been deleted",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
                 refetch();
 
-            }
 
-        })
+            })
+    }
 
- 
+
+
+
 
 
 
@@ -42,9 +65,9 @@ const MyCreatedContest = () => {
                     <thead className="text-black  ">
                         <tr>
                             <th>Name</th>
-                            
-                            <th>Category</th>
+
                             <th>Status</th>
+                            <th>Comment</th>
                             <th>Submitted</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -71,19 +94,33 @@ const MyCreatedContest = () => {
                                     </div>
                                 </div>
                             </td>
+                            <td className="badge badge-ghost bg-gradient-to-r text-white from-indigo-600 to-blue-400 mt-6 my-auto">{user?.status}</td>
                             <td>
-                                {user?.Category}
+
+                                {/* The button to open modal */}
+                                <label htmlFor="my_modal_7" className="badge badge-ghost bg-green-300 text-white">Comment</label>
+
+                                {/* Put this part before </body> tag */}
+                                <input type="checkbox" id="my_modal_7" className="modal-toggle " />
+                                <div className="modal" role="dialog">
+                                    <div className="modal-box">
+                                        <h3 className="text-lg font-bold">Comment from Admin!</h3>
+                                        <p className="py-4">{user?.comment}</p>
+                                    </div>
+                                    <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
+                                </div>
                                 <br />
 
                             </td>
-                            <td className="badge badge-ghost bg-gradient-to-r text-white from-indigo-600 to-blue-400 mt-6 my-auto">{user?.status}</td>
 
-                            <td><Link to='' className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Submission</Link></td>
+                            <td><Link to='' className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Submissions</Link></td>
                             {
                                 user?.status === 'Pending' ? <td><Link to={`/EditContest/${user?._id}`} className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Edit</Link></td> : <td><Link to='' className="btn btn-disabled btn-xs rounded-xl bg-gray-200">Edit</Link></td>
                             }
                             {
-                                user?.status === 'Pending' ? <td><Link to='' className="btn btn-ghost btn-xs rounded-xl bg-red-300">Delete</Link></td> : <td><Link to='' className="btn btn-disabled btn-xs rounded-xl bg-red-300">Delete</Link></td>
+                                user?.status === 'Pending' ? <td><button onClick={(e) => {
+                                    handleDelete(user?._id)
+                                }} className="btn btn-ghost btn-xs rounded-xl bg-red-300">Delete</button></td> : <td><Link to='' className="btn btn-disabled btn-xs rounded-xl bg-red-300">Delete</Link></td>
                             }
                         </tr>)}
 
