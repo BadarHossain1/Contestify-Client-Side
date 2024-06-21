@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import {loadStripe} from '@stripe/stripe-js';
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import { useState } from "react";
 
 const PaymentPage = () => {
 
@@ -11,6 +12,7 @@ const PaymentPage = () => {
     const details = data[0];
 
     const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+
 
 
 
@@ -34,7 +36,7 @@ const PaymentPage = () => {
                                 
                                 
                             </div>
-                            <Elements stripe={stripePromise}><CheckoutForm details={details}></CheckoutForm></Elements>
+                            <Elements stripe={stripePromise}><CheckoutForm  details={details}></CheckoutForm></Elements>
                         </div>
                         <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={details?.Image}></img>
                     </div>

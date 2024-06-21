@@ -14,7 +14,7 @@ const Footer = () => {
                             <a href="#">
                                 <div className="flex justify-center  items-center">
                                     <GiLaurelsTrophy className="text-xl lg:text-4xl text-indigo-500 " />
-                                    <Link to='/' className=" font-extrabold   font-EBGaramond text-xl lg:text-4xl">Contestify</Link>
+                                    <button  className=" font-extrabold   font-EBGaramond text-xl lg:text-4xl">Contestify</button>
                                 </div>
                             </a>
 

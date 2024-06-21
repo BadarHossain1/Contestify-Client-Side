@@ -36,6 +36,7 @@ const AddContest = () => {
         const CreatorName = user?.displayName;
         const Category = option;
         const deadline = startDate;
+        const Prize = e.target.prize.value;
         const participantsCount = 0;
         const status = 'Pending';
 
@@ -51,6 +52,7 @@ const AddContest = () => {
             deadline,
             participantsCount,
             status,
+            Prize,
 
         }
 
@@ -131,6 +133,16 @@ const AddContest = () => {
                                     name="description"
                                 />
                             </div>
+                            <div>
+                                <label className="sr-only" htmlFor="name">Contest Prize</label>
+                                <input
+                                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                    placeholder="Contest Prize"
+                                    type="text"
+                                    id="description"
+                                    name="prize"
+                                />
+                            </div>
                             {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
                                 <div>
@@ -202,7 +214,7 @@ const AddContest = () => {
                             <div className="mt-4">
                                 <button
                                     type="submit"
-                                    className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                                    className="inline-block w-full rounded-lg bg-gradient-to-r from-indigo-500 to-blue-400 px-5 py-3 font-medium text-white sm:w-auto"
                                 >
                                     Add Contest
                                 </button>

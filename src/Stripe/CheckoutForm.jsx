@@ -8,7 +8,7 @@ import { axiosSecure } from '../Hooks/useAxiosSecure';
 import { AuthContext } from '../ContextProvider/ContextProvider';
 import axios from 'axios';
 
-const CheckoutForm = ({ details }) => {
+const CheckoutForm = ({details }) => {
 
     const stripe = useStripe();
     const elements = useElements();
@@ -26,6 +26,8 @@ const CheckoutForm = ({ details }) => {
     const [clientSecret, setClientSecret] = useState();
     const [cardError, setCardError] = useState('');
     const [processing, setProcessing] = useState(false);
+    const [disable, setDisable] = useState(false);
+    
 
 
     useEffect(() => {
@@ -79,50 +81,63 @@ const CheckoutForm = ({ details }) => {
 
         //confirm payment
 
-        const {error: confirmError, paymentIntent} = await stripe.confirmCardPayment(clientSecret, {
+        const { error: confirmError, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
                 billing_details: {
                     email: user?.email,
                     name: user?.displayName,
                 },
-            }, })
+            },
+        })
 
-            if(confirmError){
-                console.log('[error]', confirmError);
-                setCardError(confirmError.message);
-                setProcessing(false);
-                return;
+        if (confirmError) {
+            console.log('[error]', confirmError);
+            setCardError(confirmError.message);
+            setProcessing(false);
+            return;
+        }
+
+        if (paymentIntent.status === 'succeeded') {
+
+            console.log(paymentIntent)
+            // 1: Create payment Info object
+            // 2: save payment info in booking collection db
+            // 3: update booking status to paid
+
+            const paymentInfo = {
+                ...details,
+                RegisterName: user?.displayName,
+                RegisterEmail: user?.email,
+                transactionId: paymentIntent.id,
+                result: 'participant',
+                date: new Date(),
+
             }
 
-            if(paymentIntent.status === 'succeeded'){
-                console.log(paymentIntent)
-                // 1: Create payment Info object
-                // 2: save payment info in booking collection db
-                // 3: update booking status to paid
-
-                const paymentInfo = {
-                    ...details,
-                    transactionId: paymentIntent.id,
-                    date: new Date(),
-
-                }
-
-                console.log(paymentInfo)
+            console.log(paymentInfo)
 
 
-                await axiosSecure.post('/booking', paymentInfo)
+            await axiosSecure.post('/booking', paymentInfo)
 
-                const count = details?.participantsCount;
-                const addCount = parseInt(count) + 1;
-                console.log(addCount);
+            const count = details?.participantsCount;
+            const addCount = parseInt(count) + 1;
+            console.log(addCount);
 
 
-                 await axiosSecure.patch(`/count/update/${details?._id}`, {addCount});
+            await axiosSecure.patch(`/count/update/${details?._id}`, { addCount });
 
-                
-                
-            }
+            Swal.fire({
+                title: "Payment Successful",
+                text: "You successfully registered for the contest",
+                icon: "success"
+            });
+
+            setDisable(true);
+
+
+
+        }
     };
 
     return (
@@ -145,7 +160,7 @@ const CheckoutForm = ({ details }) => {
                         },
                     }}
                 />
-                <button onClick={handlePay} type="submit" disabled={!stripe || !clientSecret || processing} className="flex mr-auto text-white bg-gradient-to-r from-indigo-400 to-blue-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                <button type="submit" disabled={!stripe || !clientSecret || processing || disable} className="flex mr-auto text-white bg-gradient-to-r from-indigo-400 to-blue-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded disabled:bg-gray-100">
                     Pay {details?.Price}$
                 </button>
             </form>

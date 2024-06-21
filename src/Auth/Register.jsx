@@ -9,6 +9,8 @@ import { Bounce } from 'react-toastify';
 import { Link, useNavigate } from "react-router-dom";
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { FaGoogle } from "react-icons/fa";
+import axios from "axios";
+
 
 
 
@@ -17,7 +19,7 @@ const Register = () => {
     useEffect(() => {
         document.title = "Register"
     }, [])
-    const { registerUser, GoogleSignIn, updateUserProfile, setInfo } = useContext(AuthContext);
+     const { registerUser, GoogleSignIn, updateUserProfile, setInfo } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const from = "/";
@@ -46,11 +48,29 @@ const Register = () => {
         }
     }
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
 
         console.log(data)
 
-        const { Name, Photo, password } = data;
+        const { Name, photo, password } = data;
+
+        const image = data.photo[0];
+
+
+        console.log(image);
+
+        const formData = new FormData();
+
+        formData.append('image', image);
+
+
+        const response = await axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_API_URL}`, formData)
+
+        const formImage = response.data.data.display_url;
+
+
+
+        
 
 
         registerUser(data.email, password)
@@ -59,12 +79,12 @@ const Register = () => {
                 navigate('/');
                 notify(true);
 
-                setInfo({ displayName: Name, photoURL: Photo });
-                updateUserProfile(Name, Photo)
+                setInfo({ displayName: Name, photoURL: formImage });
+                updateUserProfile(Name, formImage)
                     .then(result => {
                         console.log(result.user);
                         //navigate here to home
-                        
+
                         notify(true);
 
 
@@ -115,10 +135,10 @@ const Register = () => {
 
 
             })
+        }
 
 
-
-    }
+    
 
 
 
@@ -181,25 +201,9 @@ const Register = () => {
                                 </div>
 
                                 <div className="col-span-6">
-                                    <label
-                                        htmlFor="UserEmail"
-                                        className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
-                                    >
-                                        <input
-                                            type="photo"
-                                            id="photo"
-                                            placeholder="photo"
-                                            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"  {...register("Photo")}
-                                        />
+                                    <label for="image" className="block text-sm mb-2">Image</label>
 
-
-
-                                        <span
-                                            className="absolute start-0 top-2 -translate-y-1/2 text-xs  transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
-                                        >
-                                            Photo
-                                        </span>
-                                    </label>
+                                    <input type="file" className="file-input file-input-bordered file-input-info w-full max-w-xs bg-gradient-to-r from-indigo-500 to-blue-400 text-white" {...register("photo", { required: "Photo is required" })}/>
                                 </div>
 
 
@@ -277,13 +281,13 @@ const Register = () => {
                                     {errors.password && <span className="text-sm text-red-600">password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.</span>}
                                 </div>
 
-                                
+
                                 <div className="flex justify-center gap-6 mt-2 mb-2">
                                     <button onClick={handleGoogle} className="btn btn-circle">
-                                        <FaGoogle /> 
+                                        <FaGoogle />
                                     </button>
-                                    
-                                    
+
+
                                 </div>
 
                                 <div className="col-span-6">
@@ -330,6 +334,7 @@ const Register = () => {
             </section>
         </div>
     );
+
 };
 
 export default Register;

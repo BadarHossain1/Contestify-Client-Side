@@ -88,7 +88,9 @@ const router = createBrowserRouter([
     },
     
     {
-      path: 'AddContest',
+      
+       path: 'AddContest',
+      
       element: <PrivateRoute><HostRoute><AddContest></AddContest></HostRoute></PrivateRoute>
     },
     {
@@ -96,6 +98,7 @@ const router = createBrowserRouter([
       element: <PrivateRoute><HostRoute><ContestSubmittedPage></ContestSubmittedPage></HostRoute></PrivateRoute>
     }
       , {
+        
       path: 'ContestCreated',
       element: <PrivateRoute><HostRoute><MyCreatedContest></MyCreatedContest></HostRoute></PrivateRoute>
     },
