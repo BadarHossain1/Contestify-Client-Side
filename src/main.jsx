@@ -29,6 +29,7 @@ import ManageContest from './Dashboard/Admin/ManageContest';
 import MyProfile from './Dashboard/User/MyProfile';
 import AdminRoute from './Routes/AdminRoute';
 import HostRoute from './Routes/HostRoute';
+import PaymentPage from './Stripe/PaymentPage';
 
 const queryClient = new QueryClient()
 
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
       , {
         path: '/viewDetails/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/AllContest/id/${params.id}`)
+      },
+      {
+        path: '/payment/:id',
+        element: <PrivateRoute><PaymentPage></PaymentPage></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/AllContest/id/${params.id}`)
       },
       {
