@@ -110,7 +110,7 @@ const CheckoutForm = ({details }) => {
                 RegisterName: user?.displayName,
                 RegisterEmail: user?.email,
                 transactionId: paymentIntent.id,
-                result: 'participant',
+                result: 'participants',
                 date: new Date(),
 
             }

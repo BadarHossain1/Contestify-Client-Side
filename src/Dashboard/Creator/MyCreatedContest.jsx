@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 const MyCreatedContest = () => {
     const { user } = useContext(AuthContext);
     const [contests, setContest] = useState([]);
-
+    
 
 
 
@@ -53,6 +53,8 @@ const MyCreatedContest = () => {
 
 
 
+   
+
 
 
 
@@ -68,7 +70,7 @@ const MyCreatedContest = () => {
 
                             <th>Status</th>
                             <th>Comment</th>
-                            <th>Submitted</th>
+                           
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -113,7 +115,7 @@ const MyCreatedContest = () => {
 
                             </td>
 
-                            <td><Link to='' className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Submissions</Link></td>
+                            
                             {
                                 user?.status === 'Pending' ? <td><Link to={`/EditContest/${user?._id}`} className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Edit</Link></td> : <td><Link to='' className="btn btn-disabled btn-xs rounded-xl bg-gray-200">Edit</Link></td>
                             }

@@ -34,9 +34,9 @@ const Navbar = () => {
 
 
     const handleLogout = () => {
-        Logout()
+        Logout();
             
-            .catch(error => console.log(error))
+            // .catch(error => console.log(error))
     }
 
     const Navlink = <>

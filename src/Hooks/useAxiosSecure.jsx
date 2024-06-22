@@ -3,7 +3,8 @@ import axios from 'axios'
 
 
 export const axiosSecure = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "https://contestify-server.vercel.app/",
+  withCredentials: true
   
 })
 const useAxiosSecure = () => {

@@ -4,6 +4,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 import app from "../Firebase/firebase.config";
 import { axiosCommon } from "../Hooks/useAxiosCommon";
+import axios from "axios";
 
 
 
@@ -74,6 +75,8 @@ const ContextProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
 
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = {email: userEmail};
 
             if (currentUser) {
                 console.log("User changed", currentUser);
@@ -81,9 +84,22 @@ const ContextProvider = ({ children }) => {
                 setUser(currentUser);
                 
                 saveUser(currentUser);
+                
+                axios.post('https://contestify-server.vercel.app/jwt', loggedUser, {withCredentials: true})
+                .then(res=>{
+                    console.log(res.data);
+                })
             } else {
                 setUser(null);
                 setLoading(false)
+
+
+
+                axios.post('https://contestify-server.vercel.app/logout', loggedUser, {
+                    withCredentials: true,
+                } )
+
+
 
             }
 
