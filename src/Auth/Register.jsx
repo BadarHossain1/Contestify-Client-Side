@@ -80,7 +80,7 @@ const Register = () => {
                 notify(true);
 
                 setInfo({ displayName: Name, photoURL: formImage });
-                updateUserProfile(Name, formImage)
+                updateUserProfile(Name, formImage, 0)
                     .then(result => {
                         console.log(result.user);
                         //navigate here to home
@@ -123,7 +123,7 @@ const Register = () => {
                 console.log("user signed with google", user);
                 const { displayName, photoURL, email } = user;
                 console.log(displayName, email, photoURL);
-                updateUserProfile(displayName, photoURL)
+                updateUserProfile(displayName, photoURL, 0)
 
 
 

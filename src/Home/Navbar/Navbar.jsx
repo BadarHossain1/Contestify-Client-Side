@@ -43,6 +43,7 @@ const Navbar = () => {
 
         <li><Link to='/' className="text-base hover:bg-gradient-to-r  from-indigo-500 to-blue-400 hover:text-white">Home</Link></li>
         <li><Link to='/AllContest' className="text-base hover:bg-gradient-to-r  from-indigo-500 to-blue-400 hover:text-white">All Contest</Link></li>
+        <li><Link to='/favorite' className="text-base hover:bg-gradient-to-r  from-indigo-500 to-blue-400 hover:text-white">Favourited Contest</Link></li>
         <label className="swap swap-rotate flex lg:hidden">
 
             {/* this hidden checkbox controls the state */}

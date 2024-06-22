@@ -13,7 +13,7 @@ const User = () => {
             <li><Link to='participated' className="flex items-center px-2 pt-5  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><PiTrophy className="mr-2 text-2xl"/>
              My Participated Contest</Link></li>
             <li><Link to='winning' className="flex items-center px-2 pt-5  whitespace-nowrap text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><MdOutlineCelebration className="mr-2 text-2xl" />My Winning Contest</Link></li>
-            <li><Link to='user' className="flex items-center px-2 pt-5 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><FaRegCircleUser className="text-2xl mr-2"/>User Profile</Link></li>
+            
 
         </div>
     );

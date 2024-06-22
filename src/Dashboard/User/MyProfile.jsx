@@ -2,13 +2,15 @@ import { useForm } from "react-hook-form"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 
 const MyProfile = () => {
     const { updateUserProfile, user } = useContext(AuthContext);
     console.log(user);
+    const [contact, setContact] = useState();
+
 
 
 
@@ -55,7 +57,12 @@ const MyProfile = () => {
 
     const onSubmit = (data) => {
 
-        updateUserProfile(data.FullName, data.Photo)
+        console.log(data.Photo)
+        console.log(data.Contact)
+
+        setContact(data.Contact);
+
+        updateUserProfile(data.FullName, data.Photo, data.Contact)
             .then(() => {
                 console.log('It worked');
                 console.log(data.FullName, data.Photo)
@@ -110,6 +117,13 @@ const MyProfile = () => {
                             <span className="label-text">Image</span>
                         </label>
                         <input type="text" placeholder="Photo" className="input input-bordered bg-white" defaultValue={user?.photoURL} {...register("Photo", { required: false })} />
+
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Contact Number</span>
+                        </label>
+                        <input type="number" placeholder="Contact Number" className="input input-bordered bg-white disabled:bg-gray-200" disabled={contact} defaultValue={contact} {...register("Contact", { required: false })} />
 
                     </div>
                     <div className="form-control mt-6">

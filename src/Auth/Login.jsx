@@ -8,9 +8,7 @@ import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
-    useEffect(() => {
-        document.title = "Register"
-    }, [])
+    
     const { GoogleSignIn, Login, setLoading } = useContext(AuthContext);
 
     const navigate = useNavigate();

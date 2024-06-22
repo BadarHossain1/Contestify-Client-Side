@@ -28,12 +28,13 @@ const ContextProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const updateUserProfile = (name, image) => {
+    const updateUserProfile = (name, image, contact) => {
         // setLoading(true);
-
+        console.log(contact);
         return updateProfile(auth.currentUser, {
             displayName: name,
-            photoURL: image
+            photoURL: image,
+            
         })
 
     }

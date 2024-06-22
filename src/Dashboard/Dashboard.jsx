@@ -73,6 +73,9 @@ const Dashboard = () => {
                                     <Admin></Admin>
                                 </div>
                             }
+                            <div className="mt-5 font-EBGaramond font-bold">
+                                <li><Link to='user' className="flex items-center px-2 pt-5 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><FaRegCircleUser className="text-2xl mr-2" />User Profile</Link></li>
+                            </div>
                             <button
                                 data-drawer-target="logo-sidebar"
                                 data-drawer-toggle="logo-sidebar"

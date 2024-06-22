@@ -11,7 +11,15 @@ import Swal from "sweetalert2";
 const MyCreatedContest = () => {
     const { user } = useContext(AuthContext);
     const [contests, setContest] = useState([]);
-    
+    const count = contests.length;
+    console.log(count);
+
+    const itemPerPage = 10;
+    const numberOfPages = Math.ceil(count / itemPerPage);
+
+    const pages = [...Array(numberOfPages).keys()];
+    console.log(pages);
+
 
 
 
@@ -53,7 +61,7 @@ const MyCreatedContest = () => {
 
 
 
-   
+
 
 
 
@@ -70,7 +78,7 @@ const MyCreatedContest = () => {
 
                             <th>Status</th>
                             <th>Comment</th>
-                           
+
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -115,7 +123,7 @@ const MyCreatedContest = () => {
 
                             </td>
 
-                            
+
                             {
                                 user?.status === 'Pending' ? <td><Link to={`/EditContest/${user?._id}`} className="btn btn-ghost btn-xs rounded-xl bg-gray-200">Edit</Link></td> : <td><Link to='' className="btn btn-disabled btn-xs rounded-xl bg-gray-200">Edit</Link></td>
                             }
@@ -132,6 +140,21 @@ const MyCreatedContest = () => {
 
                 </table >
             </div >
+            {<div class="max-w-full mx-auto mt-4 rounded-xl  bg-gradient-to-r  from-indigo-400 to-blue-400  dark:bg-gray-800">
+                <div class="container flex flex-col items-center px-6 py-2 mx-auto space-y-6 sm:flex-row sm:justify-between sm:space-y-0 ">
+                    <div class="-mx-2">
+                        {pages.map((pata, index) => <a key={index} class="inline-flex items-center justify-center px-4 py-1 mx-2 text-gray-700 transition-colors duration-300 transform bg-gray-100 rounded-lg dark:text-white dark:bg-gray-700">
+                            {parseInt(pata) + 1}
+                        </a>)}
+
+
+                    </div>
+
+                    <div class="text-white dark:text-gray-400">
+                        <span class="font-medium text-white dark:text-white">1 - 10</span> of {contests?.length} records
+                    </div>
+                </div>
+            </div>}
         </div>
     );
 };

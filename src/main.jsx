@@ -30,6 +30,7 @@ import MyProfile from './Dashboard/User/MyProfile';
 import AdminRoute from './Routes/AdminRoute';
 import HostRoute from './Routes/HostRoute';
 import PaymentPage from './Stripe/PaymentPage';
+import FavouritedContest from './Home/FavouritedContest/FavouritedContest';
 
 const queryClient = new QueryClient()
 
@@ -54,12 +55,12 @@ const router = createBrowserRouter([
       , {
         path: '/viewDetails/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/AllContest/id/${params.id}`)
+        loader: ({params}) => fetch(`https://contestify-server.vercel.app/AllContest/id/${params.id}`)
       },
       {
         path: '/payment/:id',
         element: <PrivateRoute><PaymentPage></PaymentPage></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/AllContest/id/${params.id}`)
+        loader: ({params}) => fetch(`https://contestify-server.vercel.app/AllContest/id/${params.id}`)
       },
       {
         path: '/login',
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       }, {
         path: '/register',
         element: <Register></Register>
+      }
+      ,{
+        path: '/favorite',
+        element: <FavouritedContest></FavouritedContest>
       }
     ]
   },
@@ -83,7 +88,8 @@ const router = createBrowserRouter([
 
     },
     {
-      path: 'user',
+      // path: 'user',
+      index: true,
       element: <MyProfile></MyProfile>
     },
     
