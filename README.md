@@ -1,8 +1,27 @@
-# React + Vite
+# Name of the Website: Contestify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Site: [[Contestify]((https://contestify.netlify.app/)]
 
-Currently, two official plugins are available:
+###Admin Email: admin1234@gmail.com
+###Admin Password: Admin1234
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features:
+- Navbar section having title, All contest, Favorite contest and leaderboard route.
+- Banner having search bar where you can type category and get the searched contest on popular contest
+- Sliders using swiper js to showcase contest and top contest creators
+- Login and Registration using Firebase auth
+- Admin Dashboard having Manage user and manage contest route
+- Admin can  approve the requested contest and also can update user roles.
+- Contest creator dashboard having Add contest routes where creator can create a contest.
+- Submitted contest route shows the submissions and the creator can announce a winner.
+- My created contest route showing the created contests that are approved and pending.
+- User dashboad having My participated contest where user can see his participations and see the winning contests
+- Stripe for payment of registration
+- Pagination to show data.
+
+
+
+
+
+
+
